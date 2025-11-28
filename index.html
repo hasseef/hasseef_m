@@ -2,199 +2,195 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>منصة حصيف الوطنية – بوابة الحسابات</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة حصيف – بوابة الحسابات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Readex Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #f5f7f6;
     }
+    .bg-primary { background-color: #006c35; }
+    .bg-primary-soft { background-color: #e6f3ec; }
+    .text-primary { color: #006c35; }
+    .border-primary { border-color: #006c35; }
+    .chip {
+      border-radius: 999px;
+      border-width: 1px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.7rem;
+    }
+    .sidebar-link-active {
+      background-color: #e6f3ec;
+      color: #006c35;
+      font-weight: 600;
+    }
+    .section-hidden { display: none; }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-50 min-h-screen">
-  <!-- شريط علوي بالشعارات -->
-  <header class="border-b border-emerald-500/20 bg-slate-900/80 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-      <!-- شعار حصيف الرئيسي -->
-      <div class="flex items-center gap-3">
-        <img src="hasseef-logo.png" alt="شعار حصيف" class="h-12 w-auto hidden sm:block">
-        <div>
-          <p class="text-xs text-emerald-300 font-semibold">برنامج شباب المملكة حصيف الوطني</p>
-          <h1 class="text-lg sm:text-xl font-bold">منصة حصيف الوطنية لإدارة المبادرات والموارد الفعّالة</h1>
-        </div>
-      </div>
+<body class="min-h-screen flex flex-col">
 
-      <!-- شعاري تلبية + رؤية 2030 في الجهة المقابلة -->
-      <div class="flex items-center gap-3">
-        <img src="talbiya-logo.png" alt="مبادرة تلبية" class="h-10 w-auto hidden sm:block">
-        <img src="vision2030.png" alt="رؤية 2030" class="h-10 w-auto hidden sm:block">
+
+
+<!-- الشريط العلوي -->
+<div class="w-full bg-primary text-white text-[11px]">
+  <div class="max-w-6xl mx-auto px-4 py-1 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="inline-flex w-5 h-5 rounded-full bg-white/10 items-center justify-center text-[10px] font-bold">ح</span>
+      <span>برنامج شباب المملكة حصيف الوطني</span>
+    </div>
+    <div class="hidden sm:flex items-center gap-4 text-[11px]">
+      <span>منصة وطنية لتمكين الحلول التنموية وربطها بالجهات ذات العلاقة</span>
+      <span class="text-emerald-200">نسخة عرض تشغيلية (Demo Front-End)</span>
+    </div>
+  </div>
+</div>
+
+<!-- الهيدر الرئيسي -->
+<header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <!-- شعارات -->
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
+          <span class="text-primary font-bold text-lg">ح</span>
+        </div>
+        <div class="leading-tight">
+          <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
+          <div class="text-[11px] text-slate-500">بوابة تكاملية للحسابات التنموية</div>
+        </div>
       </div>
     </div>
-  </header>
 
-  <!-- محتوى الصفحة -->
-  <main class="max-w-6xl mx-auto px-4 py-10 space-y-8">
-    <!-- Hero -->
-    <section class="grid md:grid-cols-[1.3fr,0.9fr] gap-8 items-center">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-400/40 bg-emerald-500/10 text-emerald-200 text-xs mb-4">
-          <span class="text-[10px]">●</span>
-          منصة تشغيل وطنية متعددة الحسابات
-        </div>
-        <h2 class="text-2xl md:text-3xl font-bold mb-3">
-          بوابة موحدة تربط <span class="text-emerald-300">الحكومة والقطاع الخاص</span> والقطاع غير الربحي والجامعات والأفراد
-        </h2>
-        <p class="text-sm md:text-base text-slate-300 mb-6 leading-relaxed">
-          تتيح منصة حصيف إدارة الحلول والمشاريع والفعاليات وطلبات التمويل وفرص التطوع والتدريب التعاوني والمرافق والوظائف
-          وربطها جميعاً بأهداف برامج رؤية المملكة 2030، عبر حسابات مخصصة لكل فئة مستفيدة.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="account-emirate.html"
-             class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-emerald-500 text-slate-950 text-sm font-semibold hover:bg-emerald-400 transition">
-            الدخول كإمارة المنطقة
-          </a>
-          <a href="#accounts"
-             class="inline-flex items-center justify-center px-4 py-2.5 rounded-full border border-slate-700 text-xs sm:text-sm text-slate-200 hover:border-emerald-400 hover:text-emerald-300 transition">
-            استعراض جميع الحسابات
-          </a>
-        </div>
-      </div>
+    <!-- روابط علوية بسيطة -->
+    <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
+      <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
+      <a href="#!" class="hover:text-primary">دليل الاستخدام</a>
+      <a href="#!" class="hover:text-primary">مركز الدعم</a>
+    </nav>
+  </div>
+</header>
 
-      <!-- صندوق معلومات جانبي -->
-      <div class="border border-slate-800 bg-slate-900/70 rounded-3xl p-5 space-y-3">
-        <p class="text-xs text-slate-400">توضيح تشغيلي مختصر</p>
-        <ul class="text-sm text-slate-200 space-y-2 list-disc pr-5">
-          <li>هذه النسخة تجريبية (Mock API) تعمل بالكامل من خلال المتصفح و LocalStorage.</li>
-          <li>كل حساب يرى فقط الحلول والمشاريع والفعاليات المرتبطة به حسب نوع الحساب.</li>
-          <li>يمكن لاحقاً ربط الواجهات الحالية بواجهة برمجية حقيقية (REST API) دون تغيير التصميم.</li>
-        </ul>
-        <p class="text-[11px] text-slate-500">
-          تم إعداد النسخة الحالية لأغراض العرض والتجربة والتطوير التقني، ويمكن البناء عليها لتصبح نسخة إنتاجية بعد ربط الخلفية.
-        </p>
-      </div>
-    </section>
+<main class="flex-1">
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <span class="chip border border-primary bg-primary-soft text-primary">بوابة الحسابات</span>
+      <h1 class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">منصة حصيف – نقطة الدخول لكل القطاعات</h1>
+      <p class="mt-2 text-sm text-slate-600">
+        اختر نوع حسابك للانتقال إلى الواجهة الخاصة بك. هذه النسخة تعرض الشكل العام للمنصة وروابط تنقل للحسابات المختلفة
+        (إمارة، جهة حكومية، مانح، جامعة، قطاع خاص، قطاع غير ربحي، أفراد).
+      </p>
+    </div>
 
     <!-- شبكة الحسابات -->
-    <section id="accounts" class="space-y-4">
-      <div class="flex items-center justify-between gap-2">
-        <h3 class="text-lg font-semibold">الحسابات المتاحة في منصة حصيف</h3>
-        <span class="text-xs text-slate-400">اختر الحساب الذي يمثل جهتك للدخول على اللوحة التشغيلية التجريبية</span>
-      </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <a href="account-emirate.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب الإمارة / المنطقة</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">Emirate Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          لوحة تحكم شاملة لمشاريع ومبادرات المنطقة، والفعاليات، والوظائف، والتقارير المرتبطة ببرامج رؤية 2030.
+        </p>
+      </a>
 
-      <div class="grid md:grid-cols-3 gap-4">
-        <!-- إمارة المنطقة -->
-        <a href="account-emirate.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">حساب حكومي – إشرافي</p>
-            <h4 class="font-semibold mb-2">حساب إمارة المنطقة</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              يستعرض جميع الحلول والمشاريع والفعاليات والفرص المرتبطة بالمنطقة، مع ربطها بمؤشرات وبرامج رؤية 2030.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول اللوحة التشغيلية للحساب →
-          </span>
-        </a>
+      <a href="account-government.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب الجهة الحكومية</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">Government Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          إدارة المبادرات الحكومية، وطلبات الحلول، والفعاليات، والشراكات، مع ربط مباشر بمستهدفات الرؤية.
+        </p>
+      </a>
 
-        <!-- جهة حكومية -->
-        <a href="account-government.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">حساب حكومي – جهة تنفيذية</p>
-            <h4 class="font-semibold mb-2">حساب الجهة الحكومية</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              إدارة مبادرات وبرامج الجهة وربطها بالمشاريع والفعاليات والاتفاقيات، مع لوحة مؤشرات للأثر والمواءمة مع الرؤية.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول لوحة الجهة الحكومية →
-          </span>
-        </a>
+      <a href="account-nonprofit.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب القطاع غير الربحي</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">Nonprofit Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          منصة للجمعيات لتصميم مبادراتها، وطلب التمويل، وإدارة المتطوعين، وقياس الأثر التنموي.
+        </p>
+      </a>
 
-        <!-- القطاع الخاص -->
-        <a href="account-private.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">حساب قطاع خاص</p>
-            <h4 class="font-semibold mb-2">حساب القطاع الخاص</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              إدارة مساهمات المسؤولية الاجتماعية، الرعايات، الفرص الوظيفية، والمشاريع الاستثمارية التنموية.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول حساب القطاع الخاص →
-          </span>
-        </a>
+      <a href="account-private.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب القطاع الخاص</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">Private Sector Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          إدارة برامج المسؤولية الاجتماعية، واستعراض المشاريع، وتوثيق تقارير الأثر والالتزام بالمسؤولية.
+        </p>
+      </a>
 
-        <!-- القطاع غير الربحي -->
-        <a href="account-nonprofit.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">جمعيات ومؤسسات</p>
-            <h4 class="font-semibold mb-2">حساب القطاع غير الربحي</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              رفع المشاريع والفعاليات وفرص التطوع والتمويل، وإدارة العلاقة مع المانحين والجهات الشريكة في المنطقة.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول حساب القطاع غير الربحي →
-          </span>
-        </a>
+      <a href="account-university.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب الجامعة</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">University Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          ربط المشاريع البحثية والمبادرات الطلابية بجهات التمويل، مع دور استشاري علمي لمنصة حصيف.
+        </p>
+      </a>
 
-        <!-- الجامعة -->
-        <a href="account-university.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">شريك علمي وتنموي</p>
-            <h4 class="font-semibold mb-2">حساب الجامعة</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              إدارة الأبحاث والمبادرات والبرامج، التدريب التعاوني، والمرافق المتاحة للاستثمار والشراكة مع القطاعات الأخرى.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول حساب الجامعة →
-          </span>
-        </a>
+      <a href="account-donor.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب المانح</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">Donor Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          محفظة رقمية لإدارة فرص المنح، والاستثمارات التنموية، وتقارير الأثر للمشاريع المدعومة.
+        </p>
+      </a>
 
-        <!-- المانح -->
-        <a href="account-donor.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">محفظة تمويلية</p>
-            <h4 class="font-semibold mb-2">حساب المانح</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              استعراض الفرص والمشاريع، اعتماد المنح، متابعة الأثر، وإدارة المحفظة التمويلية المرتبطة بالمنصة.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول حساب المانح →
-          </span>
-        </a>
-
-        <!-- الفرد -->
-        <a href="account-individual.html"
-           class="group border border-slate-800 bg-slate-900/80 rounded-2xl p-4 hover:border-emerald-400/70 hover:bg-slate-900 transition flex flex-col justify-between">
-          <div>
-            <p class="text-xs text-emerald-300 mb-1">مشاركة مجتمعية</p>
-            <h4 class="font-semibold mb-2">حساب الفرد</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              إتاحة الفرصة للأفراد لاقتراح حلول والمشاركة في المشاريع والفعاليات والتطوع والتدريب والفرص الوظيفية.
-            </p>
-          </div>
-          <span class="mt-3 text-[11px] text-emerald-300 opacity-0 group-hover:opacity-100 transition">
-            دخول حساب الفرد →
-          </span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="mt-10 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
-      <span>هذه نسخة تجريبية من منصة حصيف الوطنية، معدّة للعرض والتطوير ضمن مبادرة تلبية وبرنامج شباب المملكة حصيف الوطني.</span>
-      <span>مرتبطة برؤية المملكة 2030 وتعزيز التكامل بين القطاعات.</span>
+      <a href="account-individual.html" class="group bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-2 hover:border-primary hover:shadow-md transition">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-slate-900">حساب الفرد</div>
+          <span class="chip border-slate-200 bg-slate-50 text-slate-600">Individual Account</span>
+        </div>
+        <p class="text-sm text-slate-600">
+          مساحة شخصية لتسجيل الحلول، واستكشاف الفرص الوظيفية والتدريبية والتطوعية، وإدارة المشاركة المجتمعية.
+        </p>
+      </a>
     </div>
-  </footer>
+  </div>
+</main>
+
+<footer class="mt-10 border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+    <div>هذه نسخة واجهة تجريبية Front-End فقط لمنصة حصيف – بدون ربط حقيقي بقواعد بيانات.</div>
+    <div class="flex items-center gap-2">
+      <span>© برنامج حصيف الوطني</span>
+      <span class="text-slate-300">|</span>
+      <span>متوافقة مع مستهدفات رؤية 2030</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // تبديل الأقسام على مستوى الصفحة
+  document.addEventListener('click', function(e) {{
+    const btn = e.target.closest('[data-section-target]');
+    if (!btn) return;
+    const target = btn.getAttribute('data-section-target');
+    document.querySelectorAll('[data-section]').forEach(sec => {{
+      if (sec.getAttribute('data-section') === target) {{
+        sec.classList.remove('section-hidden');
+      }} else {{
+        sec.classList.add('section-hidden');
+      }}
+    }});
+    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
+      if (link.getAttribute('data-sidebar-link') === target) {{
+        link.classList.add('sidebar-link-active');
+      }} else {{
+        link.classList.remove('sidebar-link-active');
+      }}
+    }});
+  }});
+</script>
 </body>
 </html>
+
