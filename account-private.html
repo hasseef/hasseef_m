@@ -27,6 +27,11 @@
       font-weight: 600;
     }
     .section-hidden { display: none; }
+    .badge-status {
+      border-radius: 999px;
+      padding: 0.1rem 0.55rem;
+      font-size: 0.68rem;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -38,8 +43,8 @@
       <span>برنامج شباب المملكة حصيف الوطني</span>
     </div>
     <div class="hidden sm:flex items-center gap-4 text-[11px]">
-      <span>منصة وطنية لتمكين الحلول والمشاريع والتنمية المتكاملة</span>
-      <span class="text-emerald-200">نسخة تشغيل أمامية تجريبية (Front-End Demo)</span>
+      <span>منصة وطنية للتكامل التنموي وتمكين جميع القطاعات</span>
+      <span class="text-emerald-200">هذه نسخة تشغيل أمامية تجريبية (Front-End Demo)</span>
     </div>
   </div>
 </div>
@@ -53,7 +58,7 @@
         </div>
         <div class="leading-tight">
           <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
-          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تكامل مع الرؤية 2030</div>
+          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
         </div>
       </div>
     </div>
@@ -119,7 +124,8 @@
         
         </div>
         <div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
-          الواجهة توضح فقط البنية التشغيلية المستخلصة من الملف التشغيلي والتقني الشامل، بدون ربط فعلي بقاعدة بيانات.
+          هذه الواجهة توضح جميع الخدمات الأساسية المنشورة لهذا الحساب. يمكن للمبرمج ربط الأزرار بالنماذج
+          وقواعد البيانات وفق الملف التشغيلي والتقني الشامل لمنصة حصيف.
         </div>
       </div>
     </aside>
@@ -134,10 +140,38 @@
               لوحة تعرض مساهمة الشركة في المشاريع والرعايات والوظائف.
             </p>
           </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة سجل جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
         </div>
+
+        
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
+            <input type="text" placeholder="ابحث داخل هذه الخدمة..."
+                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
+            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>كل الحالات</option>
+              <option>مسودة</option>
+              <option>قيد المراجعة</option>
+              <option>معتمد</option>
+              <option>مغلق</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
+            <span>الخدمة: نظرة عامة على مسؤولية الشركة</span>
+            <span class="text-slate-300">|</span>
+            <span>يرتبط بالمكوّن الأساسي في النظام: عام</span>
+          </div>
+        </div>
+        
+
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
           <div class="overflow-x-auto text-[13px]">
             <table class="min-w-full border-separate border-spacing-y-1">
@@ -153,6 +187,12 @@
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
+          فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
         
@@ -164,10 +204,38 @@
               إدارة البرامج والمبادرات التي تمولها الشركة.
             </p>
           </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة سجل جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
         </div>
+
+        
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
+            <input type="text" placeholder="ابحث داخل هذه الخدمة..."
+                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
+            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>كل الحالات</option>
+              <option>مسودة</option>
+              <option>قيد المراجعة</option>
+              <option>معتمد</option>
+              <option>مغلق</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
+            <span>الخدمة: برامج المسؤولية الاجتماعية CSR</span>
+            <span class="text-slate-300">|</span>
+            <span>يرتبط بالمكوّن الأساسي في النظام: عام</span>
+          </div>
+        </div>
+        
+
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
           <div class="overflow-x-auto text-[13px]">
             <table class="min-w-full border-separate border-spacing-y-1">
@@ -183,6 +251,12 @@
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
+          فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
         
@@ -194,16 +268,44 @@
               رعاية فعاليات ومشاريع مع إبراز العائد التنموي.
             </p>
           </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة سجل جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
         </div>
+
+        
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
+            <input type="text" placeholder="ابحث داخل هذه الخدمة..."
+                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
+            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>كل الحالات</option>
+              <option>مسودة</option>
+              <option>قيد المراجعة</option>
+              <option>معتمد</option>
+              <option>مغلق</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
+            <span>الخدمة: الرعايات والفرص الإعلانية</span>
+            <span class="text-slate-300">|</span>
+            <span>يرتبط بالمكوّن الأساسي في النظام: عام</span>
+          </div>
+        </div>
+        
+
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
           <div class="overflow-x-auto text-[13px]">
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">العنصر الممول</th><th class="py-2 px-2">الجهة المستفيدة</th><th class="py-2 px-2">نوع التمويل/الرعاية</th><th class="py-2 px-2">المبلغ</th><th class="py-2 px-2">حالة الاتفاقية</th><th class="py-2 px-2">برنامج الرؤية</th>
+                  <th class="py-2 px-2">العنصر الممول/الفرصة</th><th class="py-2 px-2">الجهة المستفيدة</th><th class="py-2 px-2">نوع التمويل/الرعاية</th><th class="py-2 px-2">المبلغ التقديري</th><th class="py-2 px-2">حالة الاتفاقية</th><th class="py-2 px-2">برنامج الرؤية</th>
                 </tr>
               </thead>
               <tbody>
@@ -213,6 +315,12 @@
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
+          فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
         
@@ -224,16 +332,44 @@
               نشر الوظائف وبرامج التدريب المرتبطة بالمشاريع.
             </p>
           </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة سجل جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
         </div>
+
+        
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
+            <input type="text" placeholder="ابحث داخل هذه الخدمة..."
+                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
+            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>كل الحالات</option>
+              <option>مسودة</option>
+              <option>قيد المراجعة</option>
+              <option>معتمد</option>
+              <option>مغلق</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
+            <span>الخدمة: الوظائف وفرص التدريب</span>
+            <span class="text-slate-300">|</span>
+            <span>يرتبط بالمكوّن الأساسي في النظام: وظائف/فرص</span>
+          </div>
+        </div>
+        
+
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
           <div class="overflow-x-auto text-[13px]">
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">المسمى الوظيفي</th><th class="py-2 px-2">الجهة</th><th class="py-2 px-2">نوع العقد</th><th class="py-2 px-2">الموقع</th><th class="py-2 px-2">آخر موعد للتقديم</th><th class="py-2 px-2">الحالة</th>
+                  <th class="py-2 px-2">المسمى الوظيفي/البرنامج</th><th class="py-2 px-2">الجهة</th><th class="py-2 px-2">نوع العقد/البرنامج</th><th class="py-2 px-2">الموقع</th><th class="py-2 px-2">آخر موعد للتقديم</th><th class="py-2 px-2">الحالة</th>
                 </tr>
               </thead>
               <tbody>
@@ -243,6 +379,12 @@
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
+          فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
         
@@ -254,10 +396,38 @@
               إدارة مرافق الشركة المتاحة للاستخدام المجتمعي أو الفعاليات.
             </p>
           </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة سجل جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
         </div>
+
+        
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
+            <input type="text" placeholder="ابحث داخل هذه الخدمة..."
+                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
+            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>كل الحالات</option>
+              <option>مسودة</option>
+              <option>قيد المراجعة</option>
+              <option>معتمد</option>
+              <option>مغلق</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
+            <span>الخدمة: المرافق المتاحة</span>
+            <span class="text-slate-300">|</span>
+            <span>يرتبط بالمكوّن الأساسي في النظام: عام</span>
+          </div>
+        </div>
+        
+
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
           <div class="overflow-x-auto text-[13px]">
             <table class="min-w-full border-separate border-spacing-y-1">
@@ -274,6 +444,12 @@
             </table>
           </div>
         </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
+          فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
+        </div>
       </section>
         
       <section data-section="reports" class="section-hidden">
@@ -284,25 +460,59 @@
               لوحة تقارير تبين حجم الاستثمار التنموي ومؤشرات الأثر.
             </p>
           </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة سجل جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
         </div>
+
+        
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
+            <input type="text" placeholder="ابحث داخل هذه الخدمة..."
+                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
+            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>كل الحالات</option>
+              <option>مسودة</option>
+              <option>قيد المراجعة</option>
+              <option>معتمد</option>
+              <option>مغلق</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
+            <span>الخدمة: تقارير الأثر والمسؤولية</span>
+            <span class="text-slate-300">|</span>
+            <span>يرتبط بالمكوّن الأساسي في النظام: تقارير</span>
+          </div>
+        </div>
+        
+
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
           <div class="overflow-x-auto text-[13px]">
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">اسم التقرير</th><th class="py-2 px-2">الفترة المغطاة</th><th class="py-2 px-2">الجهة/الحساب</th><th class="py-2 px-2">المؤشرات الرئيسية</th><th class="py-2 px-2">حالة التوليد</th>
+                  <th class="py-2 px-2">اسم التقرير</th><th class="py-2 px-2">الفترة المغطاة</th><th class="py-2 px-2">نوع التقرير</th><th class="py-2 px-2">الحساب/الجهة</th><th class="py-2 px-2">المؤشرات الرئيسية</th><th class="py-2 px-2">حالة التوليد</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
+          فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
         
@@ -312,9 +522,9 @@
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
   <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
-    <div>هذه النسخة توضح شكل الحسابات وربطها بالمكوّنات الأساسية Core Modules وفق الملف التشغيلي والتقني.</div>
+    <div>هذه النسخة توضّح جميع الحسابات والخدمات الأساسية وفق الملف التشغيلي والتقني الشامل – واجهة عرض فقط بدون قاعدة بيانات.</div>
     <div class="flex items-center gap-2">
-      <span>© مبادرة تلبية – برنامج حصيف الوطني</span>
+      <span>© مبادرة تلبية – منصة حصيف الوطنية</span>
       <span class="text-slate-300">|</span>
       <span>متسقة مع مستهدفات رؤية السعودية 2030</span>
     </div>
@@ -322,25 +532,25 @@
 </footer>
 
 <script>
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function(e) {{
     const btn = e.target.closest('[data-section-target]');
     if (!btn) return;
     const target = btn.getAttribute('data-section-target');
-    document.querySelectorAll('[data-section]').forEach(sec => {
-      if (sec.getAttribute('data-section') === target) {
+    document.querySelectorAll('[data-section]').forEach(sec => {{
+      if (sec.getAttribute('data-section') === target) {{
         sec.classList.remove('section-hidden');
-      } else {
+      }} else {{
         sec.classList.add('section-hidden');
-      }
-    });
-    document.querySelectorAll('[data-sidebar-link]').forEach(link => {
-      if (link.getAttribute('data-sidebar-link') === target) {
+      }}
+    }});
+    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
+      if (link.getAttribute('data-sidebar-link') === target) {{
         link.classList.add('sidebar-link-active');
-      } else {
+      }} else {{
         link.classList.remove('sidebar-link-active');
-      }
-    });
-  });
+      }}
+    }});
+  }});
 </script>
 </body>
 </html>
