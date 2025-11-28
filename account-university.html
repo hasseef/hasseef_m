@@ -66,10 +66,10 @@
       <div class="flex items-center gap-3">
         <img src="assets/Vision2030.png"
              alt="رؤية المملكة العربية السعودية 2030"
-             class="h-8 sm:h-10 w-auto object-contain hidden xs:block" />
+             class="h-8 sm:h-10 w-auto object-contain" />
         <img src="assets/talbiya-logo.png"
              alt="مبادرة تلبية"
-             class="h-8 sm:h-10 w-auto object-contain hidden xs:block" />
+             class="h-8 sm:h-10 w-auto object-contain" />
       </div>
     </div>
     <!-- شريط الروابط الرئيسي -->
@@ -116,6 +116,15 @@
           <span>فرص الطلاب (تدريب/تطوع/عمل)</span>
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="admissions" data-section-target="admissions">
+          <span>إدارة القبول والتسجيل</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
+
         
         <button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
@@ -339,6 +348,103 @@
           فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
+      <section data-section="admissions" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">إدارة القبول والتسجيل</h2>
+            <p class="text-[13px] text-slate-600">
+              لوحة لإدارة برامج القبول، المقاعد المتاحة، وعروض القبول المرسلة للطلاب بالتكامل مع منصة حصيف.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>تصدير تقرير القبول</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
+            <h3 class="text-sm font-semibold text-slate-900 mb-2">برامج القبول والمقاعد</h3>
+            <div class="overflow-x-auto text-[13px]">
+              <table class="min-w-full border-separate border-spacing-y-1">
+                <thead>
+                  <tr class="text-right text-slate-500">
+                    <th class="py-2 px-2">البرنامج</th>
+                    <th class="py-2 px-2">الدرجة</th>
+                    <th class="py-2 px-2">الطاقة الاستيعابية</th>
+                    <th class="py-2 px-2">المقاعد المستخدمة</th>
+                    <th class="py-2 px-2">المقاعد المتاحة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-slate-50">
+                    <td class="py-2 px-2 text-slate-800 font-semibold">بكالوريوس قانون</td>
+                    <td class="py-2 px-2 text-slate-600">بكالوريوس</td>
+                    <td class="py-2 px-2 text-slate-600">120</td>
+                    <td class="py-2 px-2 text-slate-600">95</td>
+                    <td class="py-2 px-2 text-emerald-700">25</td>
+                  </tr>
+                  <tr class="bg-white">
+                    <td class="py-2 px-2 text-slate-800 font-semibold">بكالوريوس تقنية معلومات</td>
+                    <td class="py-2 px-2 text-slate-600">بكالوريوس</td>
+                    <td class="py-2 px-2 text-slate-600">80</td>
+                    <td class="py-2 px-2 text-slate-600">80</td>
+                    <td class="py-2 px-2 text-rose-600">0 (مكتمل)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
+            <h3 class="text-sm font-semibold text-slate-900 mb-2">عروض القبول للطلاب</h3>
+            <div class="overflow-x-auto text-[13px]">
+              <table class="min-w-full border-separate border-spacing-y-1">
+                <thead>
+                  <tr class="text-right text-slate-500">
+                    <th class="py-2 px-2">اسم الطالب</th>
+                    <th class="py-2 px-2">البرنامج</th>
+                    <th class="py-2 px-2">حالة العرض</th>
+                    <th class="py-2 px-2">تاريخ إرسال العرض</th>
+                    <th class="py-2 px-2">آخر تفاعل</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-slate-50">
+                    <td class="py-2 px-2 text-slate-800 font-semibold">أحمد محمد</td>
+                    <td class="py-2 px-2 text-slate-600">بكالوريوس قانون</td>
+                    <td class="py-2 px-2 text-emerald-700 text-[12px]">مقبول نهائياً (اعتمد من خلال حصيف)</td>
+                    <td class="py-2 px-2 text-slate-600">01 / 08 / 2025</td>
+                    <td class="py-2 px-2 text-slate-600">03 / 08 / 2025</td>
+                  </tr>
+                  <tr class="bg-white">
+                    <td class="py-2 px-2 text-slate-800 font-semibold">سارة علي</td>
+                    <td class="py-2 px-2 text-slate-600">بكالوريوس تقنية معلومات</td>
+                    <td class="py-2 px-2 text-amber-700 text-[12px]">عرض مرسل – بانتظار اعتماد الطالبة</td>
+                    <td class="py-2 px-2 text-slate-600">02 / 08 / 2025</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                  </tr>
+                  <tr class="bg-slate-50">
+                    <td class="py-2 px-2 text-slate-800 font-semibold">محمد خالد</td>
+                    <td class="py-2 px-2 text-slate-600">دبلوم شبكات</td>
+                    <td class="py-2 px-2 text-slate-500 text-[12px]">اعتذار من الطالب – تم إخلاء المقعد</td>
+                    <td class="py-2 px-2 text-slate-600">28 / 07 / 2025</td>
+                    <td class="py-2 px-2 text-slate-600">30 / 07 / 2025</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يمكن ربط هذه الواجهة لاحقاً بأنظمة القبول في الجامعة ووزارة التعليم، بحيث يتم تحديث بيانات القبول
+          بشكل آلي مع ربطها بحسابات الأفراد في منصة حصيف.
+        </div>
+      </section>
+
         
       <section data-section="advisory" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
@@ -547,27 +653,29 @@
   </div>
 </footer>
 
+
 <script>
-  document.addEventListener('click', function(e) {{
+  document.addEventListener('click', function(e) {
     const btn = e.target.closest('[data-section-target]');
     if (!btn) return;
     const target = btn.getAttribute('data-section-target');
-    document.querySelectorAll('[data-section]').forEach(sec => {{
-      if (sec.getAttribute('data-section') === target) {{
+    document.querySelectorAll('[data-section]').forEach(function(sec) {
+      if (sec.getAttribute('data-section') === target) {
         sec.classList.remove('section-hidden');
-      }} else {{
+      } else {
         sec.classList.add('section-hidden');
-      }}
-    }});
-    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
-      if (link.getAttribute('data-sidebar-link') === target) {{
+      }
+    });
+    document.querySelectorAll('[data-sidebar-link]').forEach(function(link) {
+      if (link.getAttribute('data-sidebar-link') === target) {
         link.classList.add('sidebar-link-active');
-      }} else {{
+      } else {
         link.classList.remove('sidebar-link-active');
-      }}
-    }});
-  }});
+      }
+    });
+  });
 </script>
 </body>
+
 </html>
 
