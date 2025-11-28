@@ -50,41 +50,25 @@
 </div>
 
 <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
-    <div class="flex items-center justify-between gap-4">
-      <!-- هوية حصيف في الجهة اليمنى -->
-      <div class="flex items-center gap-3">
-        <img src="assets/hasif-logo.png"
-             alt="برنامج شباب المملكة حصيف الوطني"
-             class="h-10 sm:h-12 w-auto object-contain" />
-        <div class="hidden sm:flex flex-col leading-tight">
-          <span class="text-primary font-semibold text-sm">منصة حصيف الوطنية</span>
-          <span class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</span>
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
+          <span class="text-primary font-bold text-lg">ح</span>
+        </div>
+        <div class="leading-tight">
+          <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
+          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
         </div>
       </div>
-      <!-- شعارات رؤية 2030 + مبادرة تلبية -->
-      <div class="flex items-center gap-3">
-        <img src="assets/Vision2030.png"
-             alt="رؤية المملكة العربية السعودية 2030"
-             class="h-8 sm:h-10 w-auto object-contain" />
-        <img src="assets/talbiya-logo.png"
-             alt="مبادرة تلبية"
-             class="h-8 sm:h-10 w-auto object-contain" />
-      </div>
     </div>
-    <!-- شريط الروابط الرئيسي -->
-    <nav class="flex flex-wrap items-center justify-center gap-4 text-[12px] sm:text-[13px] text-slate-600 border-t border-slate-100 pt-2">
+    <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
       <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
-      <a href="index.html#modules" class="hover:text-primary">المكوّنات الأساسية</a>
-      <a href="index.html#accounts" class="hover:text-primary">الحسابات</a>
-      <a href="index.html#documents" class="hover:text-primary">الوثائق</a>
-      <a href="index.html#partnerships" class="hover:text-primary">الشراكات الاستراتيجية</a>
-      <a href="index.html#subscriptions" class="hover:text-primary">الاشتراكات</a>
-      <a href="index.html#contact" class="hover:text-primary">التواصل</a>
+      <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
+      <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
     </nav>
   </div>
 </header>
-
 
 <main class="flex-1">
   <div class="max-w-6xl mx-auto px-4 py-7 flex flex-col lg:flex-row gap-6">
@@ -132,6 +116,21 @@
         </button>
         
         </div>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="incubator" data-section-target="incubator">
+          <span>برامج الحاضنات والمسرّعات الممولة</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="facilities" data-section-target="facilities">
+          <span>مرافق مملوكة أو مدعومة من المانح</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
         <div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
           هذه الواجهة توضح جميع الخدمات الأساسية المنشورة لهذا الحساب. يمكن للمبرمج ربط الأزرار بالنماذج
           وقواعد البيانات وفق الملف التشغيلي والتقني الشامل لمنصة حصيف.
@@ -463,7 +462,153 @@
         
     </section>
   </div>
-</main>
+
+      <section data-section="incubator" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">برامج الحاضنات والمسرّعات التي يمولها المانح</h2>
+            <p class="text-[13px] text-slate-600">
+              مساحة لعرض وإدارة برامج الحاضنات والمسرّعات التي يقوم المانح بتمويلها أو رعايتها بالتعاون مع الجامعات، الجمعيات، أو الجهات الحكومية.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إطلاق برنامج حاضنة/مسرّعة جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ إدارة الدفعات الحالية</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-[12px]">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث داخل البرامج</span>
+              <input type="text" class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary" placeholder="ابحث باسم البرنامج أو الفوج...">
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحالات</option>
+                <option>جارٍ التنفيذ</option>
+                <option>مكتمل</option>
+                <option>مؤرشف</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              ترتبط هذه الخدمة بالحسابات الأخرى عبر استقبال أو إرسال طلبات الانضمام للحاضنات والمسرّعات.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم البرنامج</th>
+                  <th class="py-2 px-2">نوع البرنامج</th>
+                  <th class="py-2 px-2">الفئة المستهدفة</th>
+                  <th class="py-2 px-2">عدد المشاريع/المشاركين</th>
+                  <th class="py-2 px-2">الحالة</th>
+                  <th class="py-2 px-2">مدة البرنامج</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يستطيع المانح هنا رؤية المشاريع المحتضنة، مستويات تقدمها، والتقارير المالية والاجتماعية المرتبطة بكل برنامج حاضنة أو مسرّعة.
+        </div>
+      </section>
+
+      <section data-section="facilities" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">إدارة مرافق المانح أو المرافق المدعومة</h2>
+            <p class="text-[13px] text-slate-600">
+              إن وُجدت مرافق تحت إدارة المانح (مثل مراكز تدريب أو قاعات مؤتمرات)، يمكن إدارتها هنا وفتحها للبرامج والمبادرات التي يمولها.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة مرفق جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ إدارة الحجوزات</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية</span>
+            <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>نوع المرفق</option>
+              <option>قاعة تدريب</option>
+              <option>قاعة مؤتمرات</option>
+              <option>مسرح</option>
+              <option>مختبر</option>
+              <option>مرفق خارجي</option>
+            </select>
+            <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>المدينة / الموقع</option>
+            </select>
+          </div>
+          <div class="text-[11px] text-slate-500">
+            يمكن لأي حساب آخر في المنصة طلب حجز هذه المرافق وفق صلاحيات يحددها صاحب الحساب.
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col text-[13px]">
+            <div class="w-full h-28 rounded-xl bg-slate-100 flex items-center justify-center text-[11px] text-slate-400 mb-2">
+              صورة المرفق (عرض تجريبي)
+            </div>
+            <div class="font-semibold text-slate-900 mb-1">اسم المرفق</div>
+            <div class="text-[12px] text-slate-600 mb-1">نوع المرفق · المدينة</div>
+            <div class="text-[11px] text-slate-500 mb-2">وصف مختصر للمرفق وشروط الاستخدام الأساسية.</div>
+            <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2">
+              <span>الطاقة الاستيعابية: —</span>
+              <span>الحالة: متاح / مشغول</span>
+            </div>
+            <button class="mt-auto inline-flex items-center justify-center px-3 py-1.5 rounded-lg bg-slate-900 text-white text-[12px] hover:bg-black">
+              طلب حجز المرفق (تصميم فقط)
+            </button>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col text-[13px]">
+            <div class="w-full h-28 rounded-xl bg-slate-100 flex items-center justify-center text-[11px] text-slate-400 mb-2">
+              صورة المرفق (عرض تجريبي)
+            </div>
+            <div class="font-semibold text-slate-900 mb-1">اسم المرفق</div>
+            <div class="text-[12px] text-slate-600 mb-1">نوع المرفق · المدينة</div>
+            <div class="text-[11px] text-slate-500 mb-2">وصف مختصر للمرفق وشروط الاستخدام الأساسية.</div>
+            <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2">
+              <span>الطاقة الاستيعابية: —</span>
+              <span>الحالة: متاح / مشغول</span>
+            </div>
+            <button class="mt-auto inline-flex items-center justify-center px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-700 hover:bg-slate-50">
+              عرض تفاصيل المرفق
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          تُربط حجوزات هذه المرافق بالمشاريع الممولة من المانح، لتظهر في تقارير الأثر والتنمية ضمن حساب المانح في المنصة.
+        </div>
+      </section>
+
+  </main>
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
   <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
@@ -477,25 +622,25 @@
 </footer>
 
 <script>
-  document.addEventListener('click', function(e) {
-    const btnSection = e.target.closest('[data-section-target]');
-    if (!btnSection) return;
-    const target = btnSection.getAttribute('data-section-target');
-    document.querySelectorAll('[data-section]').forEach(function(sec) {
-      if (sec.getAttribute('data-section') === target) {
+  document.addEventListener('click', function(e) {{
+    const btn = e.target.closest('[data-section-target]');
+    if (!btn) return;
+    const target = btn.getAttribute('data-section-target');
+    document.querySelectorAll('[data-section]').forEach(sec => {{
+      if (sec.getAttribute('data-section') === target) {{
         sec.classList.remove('section-hidden');
-      } else {
+      }} else {{
         sec.classList.add('section-hidden');
-      }
-    });
-    document.querySelectorAll('[data-sidebar-link]').forEach(function(link) {
-      if (link.getAttribute('data-sidebar-link') === target) {
+      }}
+    }});
+    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
+      if (link.getAttribute('data-sidebar-link') === target) {{
         link.classList.add('sidebar-link-active');
-      } else {
+      }} else {{
         link.classList.remove('sidebar-link-active');
-      }
-    });
-  });
+      }}
+    }});
+  }});
 </script>
 </body>
 </html>

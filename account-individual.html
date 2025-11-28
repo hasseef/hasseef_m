@@ -50,41 +50,25 @@
 </div>
 
 <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
-    <div class="flex items-center justify-between gap-4">
-      <!-- هوية حصيف في الجهة اليمنى -->
-      <div class="flex items-center gap-3">
-        <img src="assets/hasif-logo.png"
-             alt="برنامج شباب المملكة حصيف الوطني"
-             class="h-10 sm:h-12 w-auto object-contain" />
-        <div class="hidden sm:flex flex-col leading-tight">
-          <span class="text-primary font-semibold text-sm">منصة حصيف الوطنية</span>
-          <span class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</span>
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
+          <span class="text-primary font-bold text-lg">ح</span>
+        </div>
+        <div class="leading-tight">
+          <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
+          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
         </div>
       </div>
-      <!-- شعارات رؤية 2030 + مبادرة تلبية -->
-      <div class="flex items-center gap-3">
-        <img src="assets/Vision2030.png"
-             alt="رؤية المملكة العربية السعودية 2030"
-             class="h-8 sm:h-10 w-auto object-contain" />
-        <img src="assets/talbiya-logo.png"
-             alt="مبادرة تلبية"
-             class="h-8 sm:h-10 w-auto object-contain" />
-      </div>
     </div>
-    <!-- شريط الروابط الرئيسي -->
-    <nav class="flex flex-wrap items-center justify-center gap-4 text-[12px] sm:text-[13px] text-slate-600 border-t border-slate-100 pt-2">
+    <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
       <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
-      <a href="index.html#modules" class="hover:text-primary">المكوّنات الأساسية</a>
-      <a href="index.html#accounts" class="hover:text-primary">الحسابات</a>
-      <a href="index.html#documents" class="hover:text-primary">الوثائق</a>
-      <a href="index.html#partnerships" class="hover:text-primary">الشراكات الاستراتيجية</a>
-      <a href="index.html#subscriptions" class="hover:text-primary">الاشتراكات</a>
-      <a href="index.html#contact" class="hover:text-primary">التواصل</a>
+      <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
+      <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
     </nav>
   </div>
 </header>
-
 
 <main class="flex-1">
   <div class="max-w-6xl mx-auto px-4 py-7 flex flex-col lg:flex-row gap-6">
@@ -112,14 +96,12 @@
         
         <button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          \1
-        <button type="button"
-          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          data-sidebar-link="admissions" data-section-target="admissions">
-          <span>قبولي التعليمي الموحد</span>
+          data-sidebar-link="opportunities" data-section-target="opportunities">
+          <span>الفرص الوظيفية والتدريبية</span>
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
-<button type="button"
+        
+        <button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
           data-sidebar-link="volunteering" data-section-target="volunteering">
           <span>الفرص التطوعية</span>
@@ -141,6 +123,21 @@
         </button>
         
         </div>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="incubator" data-section-target="incubator">
+          <span>حاضنة أفكاري ومشاريعي</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="facilities" data-section-target="facilities">
+          <span>طلب استخدام المرافق</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
         <div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
           هذه الواجهة توضح جميع الخدمات الأساسية المنشورة لهذا الحساب. يمكن للمبرمج ربط الأزرار بالنماذج
           وقواعد البيانات وفق الملف التشغيلي والتقني الشامل لمنصة حصيف.
@@ -340,123 +337,8 @@
           يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
           فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
-      
-      <section data-section="admissions" class="section-hidden">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <div>
-            <h2 class="text-lg font-semibold text-slate-900">قبولي التعليمي الموحد</h2>
-            <p class="text-[13px] text-slate-600">
-              عرض موحد لجميع عروض القبول من الجامعات والجهات التعليمية، مع إمكانية اعتماد قبول واحد فقط وتحرير المقاعد للآخرين.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition" data-open-admission-modal="accept">
-              <span>✔ اعتماد قبول نهائي</span>
-            </button>
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition" data-open-admission-modal="reject">
-              <span>✖ اعتذار عن عرض قبول</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-          <div class="flex flex-wrap gap-2 items-center text-[12px]">
-            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
-            <input type="text" placeholder="ابحث داخل عروض القبول..."
-                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[180px]" />
-            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
-              <option>كل العروض</option>
-              <option>عروض جديدة</option>
-              <option>عروض قيد الدراسة</option>
-              <option>قبول معتمد</option>
-              <option>تم الاعتذار عنه</option>
-            </select>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
-            <span>الخدمة: قبولي التعليمي الموحد</span>
-            <span class="text-slate-300">|</span>
-            <span>يرتبط بالمكوّن الأساسي في النظام: إدارة القبول والتسجيل</span>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
-          <div class="overflow-x-auto text-[13px]">
-            <table class="min-w-full border-separate border-spacing-y-1">
-              <thead>
-                <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">الجهة التعليمية</th>
-                  <th class="py-2 px-2">البرنامج / التخصص</th>
-                  <th class="py-2 px-2">نوع القبول</th>
-                  <th class="py-2 px-2">نوع المقعد</th>
-                  <th class="py-2 px-2">المدينة</th>
-                  <th class="py-2 px-2">حالة العرض</th>
-                  <th class="py-2 px-2">آخر موعد لاعتماد العرض</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="mt-3 text-[11px] text-slate-500">
-          <span class="font-semibold">ملاحظة تشغيلية:</span>
-          عند ربط الخدمة فعلياً، يتم السماح للطالب باعتماد قبول واحد فقط، ويؤدي ذلك إلى تحرير المقاعد في العروض الأخرى تلقائياً لصالح متقدمين آخرين.
-        </div>
       </section>
-
-      <!-- نوافذ منبثقة لاعتماد/رفض عروض القبول (عرض فقط) -->
-      <div id="admission-modal-accept" class="fixed inset-0 bg-black/40 flex items-center justify-center px-4 z-50 hidden">
-        <div class="bg-white max-w-md w-full rounded-2xl border border-slate-200 shadow-xl p-5 text-sm">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="text-base font-semibold text-slate-900">اعتماد قبول نهائي</h3>
-            <button type="button" class="text-slate-500 hover:text-slate-700" data-close-admission-modal>✕</button>
-          </div>
-          <p class="text-[13px] text-slate-600 mb-3">
-            سيتم في النسخة الفعلية اختيار عرض القبول المعتمد، وإرسال إشعار للجامعة، وتحديث حالة بقية العروض إلى "غير معتمد" مع تحرير المقاعد.
-          </p>
-          <div class="text-[11px] text-slate-500 mb-3">
-            هذه النافذة تجريبية فقط لتوضيح التدفق التشغيلي دون ربط فعلي بقواعد البيانات.
-          </div>
-          <div class="flex items-center justify-end gap-2">
-            <button type="button" class="px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-700" data-close-admission-modal>إلغاء</button>
-            <button type="button" class="px-4 py-1.5 rounded-lg bg-primary text-white text-[12px] hover:bg-emerald-700">تأكيد (تجريبي)</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="admission-modal-reject" class="fixed inset-0 bg-black/40 flex items-center justify-center px-4 z-50 hidden">
-        <div class="bg-white max-w-md w-full rounded-2xl border border-slate-200 shadow-xl p-5 text-sm">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="text-base font-semibold text-slate-900">اعتذار عن عرض قبول</h3>
-            <button type="button" class="text-slate-500 hover:text-slate-700" data-close-admission-modal>✕</button>
-          </div>
-          <p class="text-[13px] text-slate-600 mb-3">
-            عند تفعيل الخدمة، يؤدي الاعتذار إلى تحرير المقعد في الجهة التعليمية لصالح متقدم آخر، مع تسجيل سبب الاعتذار.
-          </p>
-          <div class="mb-3">
-            <label class="block text-[11px] text-slate-600 mb-1">سبب الاعتذار (اختياري)</label>
-            <textarea rows="3" class="w-full rounded-xl border border-slate-200 px-3 py-2 text-[13px] focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
-          </div>
-          <div class="text-[11px] text-slate-500 mb-3">
-            هذه النافذة تجريبية فقط ولا تقوم بتغيير أي بيانات فعلية.
-          </div>
-          <div class="flex items-center justify-end gap-2">
-            <button type="button" class="px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-700" data-close-admission-modal>إلغاء</button>
-            <button type="button" class="px-4 py-1.5 rounded-lg bg-slate-900 text-white text-[12px] hover:bg-black">تأكيد الاعتذار (تجريبي)</button>
-          </div>
-        </div>
-      </div>
-
+        
       <section data-section="volunteering" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
@@ -651,7 +533,153 @@
         
     </section>
   </div>
-</main>
+
+      <section data-section="incubator" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">حاضنة أفكاري ومشاريعي</h2>
+            <p class="text-[13px] text-slate-600">
+              تجميع لكل الطلبات التي يقدمها الفرد للانضمام إلى حاضنات أو مسرّعات الأعمال أو المبادرات المجتمعية عبر المنصة.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إطلاق برنامج حاضنة/مسرّعة جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ إدارة الدفعات الحالية</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-[12px]">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث داخل البرامج</span>
+              <input type="text" class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary" placeholder="ابحث باسم البرنامج أو الفوج...">
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحالات</option>
+                <option>جارٍ التنفيذ</option>
+                <option>مكتمل</option>
+                <option>مؤرشف</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              ترتبط هذه الخدمة بالحسابات الأخرى عبر استقبال أو إرسال طلبات الانضمام للحاضنات والمسرّعات.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم البرنامج</th>
+                  <th class="py-2 px-2">نوع البرنامج</th>
+                  <th class="py-2 px-2">الفئة المستهدفة</th>
+                  <th class="py-2 px-2">عدد المشاريع/المشاركين</th>
+                  <th class="py-2 px-2">الحالة</th>
+                  <th class="py-2 px-2">مدة البرنامج</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          يستطيع الفرد متابعة حالة كل طلب (قيد المراجعة، مقبول، مرفوض، على قائمة الانتظار) وربطه بفرص تمويل أو تدريب أو توظيف.
+        </div>
+      </section>
+
+      <section data-section="facilities" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">طلب استخدام المرافق عبر المنصة</h2>
+            <p class="text-[13px] text-slate-600">
+              صفحة توضح طلبات الفرد لاستخدام المرافق (قاعات، ملاعب، مسارح، مختبرات) سواء لأغراض تعليمية أو مجتمعية أو شبابية.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة مرفق جديد</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ إدارة الحجوزات</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+          <div class="flex flex-wrap gap-2 items-center text-[12px]">
+            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية</span>
+            <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>نوع المرفق</option>
+              <option>قاعة تدريب</option>
+              <option>قاعة مؤتمرات</option>
+              <option>مسرح</option>
+              <option>مختبر</option>
+              <option>مرفق خارجي</option>
+            </select>
+            <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+              <option>المدينة / الموقع</option>
+            </select>
+          </div>
+          <div class="text-[11px] text-slate-500">
+            يمكن لأي حساب آخر في المنصة طلب حجز هذه المرافق وفق صلاحيات يحددها صاحب الحساب.
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col text-[13px]">
+            <div class="w-full h-28 rounded-xl bg-slate-100 flex items-center justify-center text-[11px] text-slate-400 mb-2">
+              صورة المرفق (عرض تجريبي)
+            </div>
+            <div class="font-semibold text-slate-900 mb-1">اسم المرفق</div>
+            <div class="text-[12px] text-slate-600 mb-1">نوع المرفق · المدينة</div>
+            <div class="text-[11px] text-slate-500 mb-2">وصف مختصر للمرفق وشروط الاستخدام الأساسية.</div>
+            <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2">
+              <span>الطاقة الاستيعابية: —</span>
+              <span>الحالة: متاح / مشغول</span>
+            </div>
+            <button class="mt-auto inline-flex items-center justify-center px-3 py-1.5 rounded-lg bg-slate-900 text-white text-[12px] hover:bg-black">
+              طلب حجز المرفق (تصميم فقط)
+            </button>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col text-[13px]">
+            <div class="w-full h-28 rounded-xl bg-slate-100 flex items-center justify-center text-[11px] text-slate-400 mb-2">
+              صورة المرفق (عرض تجريبي)
+            </div>
+            <div class="font-semibold text-slate-900 mb-1">اسم المرفق</div>
+            <div class="text-[12px] text-slate-600 mb-1">نوع المرفق · المدينة</div>
+            <div class="text-[11px] text-slate-500 mb-2">وصف مختصر للمرفق وشروط الاستخدام الأساسية.</div>
+            <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2">
+              <span>الطاقة الاستيعابية: —</span>
+              <span>الحالة: متاح / مشغول</span>
+            </div>
+            <button class="mt-auto inline-flex items-center justify-center px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-700 hover:bg-slate-50">
+              عرض تفاصيل المرفق
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          تظهر هنا حالة كل طلب (قيد المراجعة، معتمد، مرفوض)، مع ربطه بالجهة المالكة للمرفق (جامعة، جهة حكومية، جمعية، شركة).
+        </div>
+      </section>
+
+  </main>
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
   <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
@@ -665,47 +693,25 @@
 </footer>
 
 <script>
-  document.addEventListener('click', function(e) {
-    // تبديل الأقسام
-    const btnSection = e.target.closest('[data-section-target]');
-    if (btnSection) {
-      const target = btnSection.getAttribute('data-section-target');
-      document.querySelectorAll('[data-section]').forEach(function(sec) {
-        if (sec.getAttribute('data-section') === target) {
-          sec.classList.remove('section-hidden');
-        } else {
-          sec.classList.add('section-hidden');
-        }
-      });
-      document.querySelectorAll('[data-sidebar-link]').forEach(function(link) {
-        if (link.getAttribute('data-sidebar-link') === target) {
-          link.classList.add('sidebar-link-active');
-        } else {
-          link.classList.remove('sidebar-link-active');
-        }
-      });
-      return;
-    }
-
-    // فتح نوافذ القبول/الاعتذار
-    const openAdmission = e.target.closest('[data-open-admission-modal]');
-    if (openAdmission) {
-      const type = openAdmission.getAttribute('data-open-admission-modal');
-      const modalId = type === 'accept' ? 'admission-modal-accept' : 'admission-modal-reject';
-      const modal = document.getElementById(modalId);
-      if (modal) modal.classList.remove('hidden');
-      return;
-    }
-
-    // إغلاق نوافذ القبول/الاعتذار
-    const closeAdmission = e.target.closest('[data-close-admission-modal]');
-    if (closeAdmission) {
-      document.querySelectorAll('#admission-modal-accept, #admission-modal-reject').forEach(function(modal) {
-        modal.classList.add('hidden');
-      });
-      return;
-    }
-  });
+  document.addEventListener('click', function(e) {{
+    const btn = e.target.closest('[data-section-target]');
+    if (!btn) return;
+    const target = btn.getAttribute('data-section-target');
+    document.querySelectorAll('[data-section]').forEach(sec => {{
+      if (sec.getAttribute('data-section') === target) {{
+        sec.classList.remove('section-hidden');
+      }} else {{
+        sec.classList.add('section-hidden');
+      }}
+    }});
+    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
+      if (link.getAttribute('data-sidebar-link') === target) {{
+        link.classList.add('sidebar-link-active');
+      }} else {{
+        link.classList.remove('sidebar-link-active');
+      }}
+    }});
+  }});
 </script>
 </body>
 </html>
