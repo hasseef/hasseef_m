@@ -548,25 +548,25 @@
 </footer>
 
 <script>
-  document.addEventListener('click', function(e) {{
-    const btn = e.target.closest('[data-section-target]');
-    if (!btn) return;
-    const target = btn.getAttribute('data-section-target');
-    document.querySelectorAll('[data-section]').forEach(sec => {{
-      if (sec.getAttribute('data-section') === target) {{
+  document.addEventListener('click', function(e) {
+    const btnSection = e.target.closest('[data-section-target]');
+    if (!btnSection) return;
+    const target = btnSection.getAttribute('data-section-target');
+    document.querySelectorAll('[data-section]').forEach(function(sec) {
+      if (sec.getAttribute('data-section') === target) {
         sec.classList.remove('section-hidden');
-      }} else {{
+      } else {
         sec.classList.add('section-hidden');
-      }}
-    }});
-    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
-      if (link.getAttribute('data-sidebar-link') === target) {{
+      }
+    });
+    document.querySelectorAll('[data-sidebar-link]').forEach(function(link) {
+      if (link.getAttribute('data-sidebar-link') === target) {
         link.classList.add('sidebar-link-active');
-      }} else {{
+      } else {
         link.classList.remove('sidebar-link-active');
-      }}
-    }});
-  }});
+      }
+    });
+  });
 </script>
 </body>
 </html>

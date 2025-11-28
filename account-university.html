@@ -112,12 +112,14 @@
         
         <button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          data-sidebar-link="students-opps" data-section-target="students-opps">
-          <span>فرص الطلاب (تدريب/تطوع/عمل)</span>
+          \1
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="admissions-mgmt" data-section-target="admissions-mgmt">
+          <span>إدارة القبول والتسجيل</span>
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
-        
-        <button type="button"
+<button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
           data-sidebar-link="advisory" data-section-target="advisory">
           <span>الدور الاستشاري العلمي</span>
@@ -338,8 +340,85 @@
           يمكن ربط هذه الخدمة لاحقاً بواجهات برمجية (APIs) وقاعدة بيانات بحيث يتم تحميل السجلات
           فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
+      
+      <section data-section="admissions-mgmt" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">إدارة القبول والتسجيل</h2>
+            <p class="text-[13px] text-slate-600">
+              لوحة موحدة لبرامج القبول الجامعي، الطاقة الاستيعابية، وعروض القبول المرسلة للطلاب عبر منصة حصيف.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+              <span>+ إضافة برنامج قبول</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
+              <span>⋯ خيارات متقدمة</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+          <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
+            <h3 class="text-sm font-semibold text-slate-900 mb-3">برامج القبول والمقاعد المتاحة</h3>
+            <div class="overflow-x-auto text-[13px]">
+              <table class="min-w-full border-separate border-spacing-y-1">
+                <thead>
+                  <tr class="text-right text-slate-500">
+                    <th class="py-2 px-2">البرنامج</th>
+                    <th class="py-2 px-2">الدرجة العلمية</th>
+                    <th class="py-2 px-2">الطاقة الاستيعابية</th>
+                    <th class="py-2 px-2">المقاعد المستخدمة</th>
+                    <th class="py-2 px-2">المقاعد المتاحة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-slate-50">
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
+            <h3 class="text-sm font-semibold text-slate-900 mb-3">عروض القبول المرسلة عبر حصيف</h3>
+            <div class="overflow-x-auto text-[13px]">
+              <table class="min-w-full border-separate border-spacing-y-1">
+                <thead>
+                  <tr class="text-right text-slate-500">
+                    <th class="py-2 px-2">اسم الطالب</th>
+                    <th class="py-2 px-2">البرنامج</th>
+                    <th class="py-2 px-2">حالة العرض</th>
+                    <th class="py-2 px-2">تاريخ الإرسال</th>
+                    <th class="py-2 px-2">آخر تفاعل</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-slate-50">
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                    <td class="py-2 px-2 text-slate-600">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-2 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          هذه الخدمة ترتبط مباشرة بخدمة "قبولي التعليمي الموحد" في حساب الفرد، بحيث يتم تحديث حالة العروض والمقاعد بشكل متزامن بين المنصتين.
+        </div>
       </section>
-        
+
       <section data-section="advisory" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
@@ -548,25 +627,25 @@
 </footer>
 
 <script>
-  document.addEventListener('click', function(e) {{
-    const btn = e.target.closest('[data-section-target]');
-    if (!btn) return;
-    const target = btn.getAttribute('data-section-target');
-    document.querySelectorAll('[data-section]').forEach(sec => {{
-      if (sec.getAttribute('data-section') === target) {{
+  document.addEventListener('click', function(e) {
+    const btnSection = e.target.closest('[data-section-target]');
+    if (!btnSection) return;
+    const target = btnSection.getAttribute('data-section-target');
+    document.querySelectorAll('[data-section]').forEach(function(sec) {
+      if (sec.getAttribute('data-section') === target) {
         sec.classList.remove('section-hidden');
-      }} else {{
+      } else {
         sec.classList.add('section-hidden');
-      }}
-    }});
-    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
-      if (link.getAttribute('data-sidebar-link') === target) {{
+      }
+    });
+    document.querySelectorAll('[data-sidebar-link]').forEach(function(link) {
+      if (link.getAttribute('data-sidebar-link') === target) {
         link.classList.add('sidebar-link-active');
-      }} else {{
+      } else {
         link.classList.remove('sidebar-link-active');
-      }}
-    }});
-  }});
+      }
+    });
+  });
 </script>
 </body>
 </html>
