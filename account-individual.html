@@ -126,10 +126,18 @@
 
         <button type="button"
           class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          data-sidebar-link="facilities-usage" data-section-target="facilities-usage">
-          <span>استخدام المرافق</span>
+          data-sidebar-link="admission" data-section-target="admission">
+          <span>القبول العلمي والفرص التعليمية</span>
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="incubator" data-section-target="incubator">
+          <span>حاضنة أفكاري ومشاريعي</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
         <div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
           هذه الواجهة توضح جميع الخدمات الأساسية المنشورة لهذا الحساب. يمكن للمبرمج ربط الأزرار بالنماذج
           وقواعد البيانات وفق الملف التشغيلي والتقني الشامل لمنصة حصيف.
@@ -526,13 +534,13 @@
     </section>
   </div>
 
-      <section data-section="facilities-usage" class="section-hidden">
+      <section data-section="admission" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="text-lg font-semibold text-slate-900">طلبات استخدام المرافق</h2>
+            <h2 class="text-lg font-semibold text-slate-900">القبول العلمي والفرص التعليمية المتاحة لي</h2>
             <p class="text-[13px] text-slate-600">
-              يتيح هذا القسم للفرد الاطلاع على طلباته لاستخدام المرافق المختلفة (قاعات، مسارح، ملاعب، مختبرات)
-              التي تملكها جهات حكومية أو جامعات أو جمعيات أو شركات، دون أن يكون له مرفق خاص للتأجير.
+              في هذه الواجهة يمكنك متابعة نتائج القبول في الجامعات والكليات والمعاهد والبرامج التدريبية المرتبطة بمنصة حصيف،
+              واعتماد جهة واحدة فقط كجهة الالتحاق النهائية، بحيث تتحرّر بقية المقاعد ليستفيد منها متقدمون آخرون.
             </p>
           </div>
         </div>
@@ -540,18 +548,24 @@
         <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
           <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-[12px]">
             <div class="flex flex-wrap gap-2 items-center">
-              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث سريع</span>
-              <input type="text" class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary" placeholder="ابحث باسم المرفق أو الجهة...">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">ترشيحات القبول</span>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الجهات</option>
+                <option>جامعات</option>
+                <option>كليات</option>
+                <option>معاهد</option>
+                <option>برامج تدريبية</option>
+              </select>
               <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
                 <option>كل الحالات</option>
-                <option>قيد المراجعة</option>
-                <option>معتمد</option>
+                <option>مرشح</option>
+                <option>مقبول مبدئياً</option>
+                <option>مقبول نهائياً</option>
                 <option>مرفوض</option>
-                <option>منتهي</option>
               </select>
             </div>
             <div class="text-[11px] text-slate-500">
-              طلبات استخدام المرافق تصدر من حسابات الجهات المالكة للمرافق، ولا يمتلك حساب الفرد صلاحية إضافة مرافق جديدة أو تأجيرها.
+              يمكنك اختيار جهة واحدة فقط لاعتماد القبول النهائي. عند اعتمادك للقبول في جهة معينة، تُعاد بقية المقاعد للنظام ليستفيد منها متقدمون آخرون.
             </div>
           </div>
 
@@ -559,17 +573,88 @@
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">اسم المرفق</th>
-                  <th class="py-2 px-2">الجهة المالكة للمرفق</th>
-                  <th class="py-2 px-2">نوع المرفق</th>
-                  <th class="py-2 px-2">تاريخ الاستخدام المطلوب</th>
-                  <th class="py-2 px-2">الغرض من الاستخدام</th>
-                  <th class="py-2 px-2">الحالة</th>
+                  <th class="py-2 px-2">اسم الجهة التعليمية</th>
+                  <th class="py-2 px-2">البرنامج</th>
+                  <th class="py-2 px-2">نوع البرنامج</th>
+                  <th class="py-2 px-2">حالة القبول</th>
+                  <th class="py-2 px-2">تاريخ آخر تحديث</th>
+                  <th class="py-2 px-2">إجراء</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-slate-50">
                   <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">
+                    <button class="px-3 py-1.5 rounded-lg bg-slate-900 text-white text-[11px] hover:bg-black">
+                      اعتماد القبول (تصميم فقط)
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          في التنفيذ الفعلي، يتم ربط هذه الصفحة بأنظمة القبول في الجامعات والجهات التعليمية، بحيث يتم إغلاق بقية الترشيحات
+          تلقائياً بعد اعتمادك لمقعد واحد نهائي، مع إتاحة مقعدك السابق لمتقدم آخر وفق سياسات الجهة التعليمية.
+        </div>
+      </section>
+
+
+      <section data-section="incubator" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">حاضنة أفكاري ومشاريعي</h2>
+            <p class="text-[13px] text-slate-600">
+              هنا يمكنك متابعة طلباتك للانضمام إلى الحاضنات والمسرّعات المختلفة (جامعات، جمعيات، شركات، جهات حكومية)
+              عبر منصة حصيف، ومعرفة حالة كل فكرة أو مشروع تقدمت به.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-[12px]">
+            <div class="flex flex-wrap gap-2 items-center">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية الطلبات</span>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحاضنات</option>
+                <option>حاضنات جامعية</option>
+                <option>حاضنات غير ربحية</option>
+                <option>حاضنات شركات</option>
+                <option>برامج حكومية</option>
+              </select>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحالات</option>
+                <option>قيد المراجعة</option>
+                <option>مقبول</option>
+                <option>مرفوض</option>
+                <option>على قائمة الانتظار</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              ترتبط هذه الطلبات مباشرة بحسابات الجهات المالكة للحاضنات، بينما يبقى هذا الحساب لعرض حالة طلباتك فقط.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم الفكرة / المشروع</th>
+                  <th class="py-2 px-2">الجهة / الحاضنة</th>
+                  <th class="py-2 px-2">نوع البرنامج</th>
+                  <th class="py-2 px-2">الحالة</th>
+                  <th class="py-2 px-2">آخر تحديث</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
                   <td class="py-2 px-2 text-slate-600">—</td>
                   <td class="py-2 px-2 text-slate-600">—</td>
                   <td class="py-2 px-2 text-slate-600">—</td>
@@ -583,10 +668,11 @@
 
         <div class="mt-3 text-[11px] text-slate-500">
           <span class="font-semibold">ملاحظة تشغيلية:</span>
-          في التنفيذ الفعلي، يتم ربط هذا القسم بأنظمة الجهات المالكة للمرافق، بحيث تظهر للفرد فقط طلباته
-          هو لاستخدام المرافق، بينما تبقى إدارة المرافق وتأجيرها وإتاحتها بيد الجهات (الحسابات المؤسسية) فقط.
+          في النسخة الفعلية، يمكن ربط هذه الصفحة مباشرة بنماذج التقديم في الحاضنات المختلفة داخل منصة حصيف،
+          بحيث يتم تحديث حالة كل مشروع أو فكرة بشكل آلي من حساب الجهة المالكة للحاضنة.
         </div>
       </section>
+
   </main>
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
