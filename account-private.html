@@ -51,30 +51,22 @@
 
 <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-4">
       <div class="flex items-center gap-2">
-        <img src="hasif-logo.png" alt="شعار منصة حصيف" class="w-10 h-10 rounded-xl object-contain bg-primary-soft p-1">
+        <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
+          <span class="text-primary font-bold text-lg">ح</span>
+        </div>
         <div class="leading-tight">
           <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
-          <div class="text-[11px] text-slate-500">
-            حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030
-          </div>
+          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
         </div>
       </div>
     </div>
-    <nav class="hidden md:flex items-center gap-4 text-[13px] text-slate-600">
+    <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
       <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
-      <a href="index.html#modules" class="hover:text-primary">المكوّنات الأساسية</a>
-      <a href="index.html#accounts" class="hover:text-primary">الحسابات</a>
-      <a href="index.html#documents" class="hover:text-primary">الوثائق</a>
-      <a href="index.html#partnerships" class="hover:text-primary">الشراكات</a>
-      <a href="index.html#subscriptions" class="hover:text-primary">الاشتراكات</a>
-      <a href="index.html#contact" class="hover:text-primary">التواصل</a>
+      <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
+      <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
     </nav>
-    <div class="flex items-center gap-2">
-      <img src="Vision2030.png" alt="رؤية السعودية 2030" class="h-8 hidden sm:block object-contain">
-      <img src="talbiya-logo.png" alt="مبادرة تلبية" class="h-8 hidden sm:block object-contain">
-    </div>
   </div>
 </header>
 
@@ -131,22 +123,7 @@
         </button>
         
         </div>
-        
-        <button type="button"
-          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          data-sidebar-link="incubator" data-section-target="incubator">
-          <span>حاضنة ومسرّعة الأعمال</span>
-          <span class="text-[10px] text-slate-400">↳</span>
-        </button>
-
-        <button type="button"
-          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          data-sidebar-link="facilities" data-section-target="facilities">
-          <span>مرافق ومنشآت الشركة</span>
-          <span class="text-[10px] text-slate-400">↳</span>
-        </button>
-
-<div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+        <div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
           هذه الواجهة توضح جميع الخدمات الأساسية المنشورة لهذا الحساب. يمكن للمبرمج ربط الأزرار بالنماذج
           وقواعد البيانات وفق الملف التشغيلي والتقني الشامل لمنصة حصيف.
         </div>
@@ -541,153 +518,7 @@
         
     </section>
   </div>
-
-      <section data-section="incubator" class="section-hidden">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <div>
-            <h2 class="text-lg font-semibold text-slate-900">حاضنة ومسرّعة الأعمال للقطاع الخاص</h2>
-            <p class="text-[13px] text-slate-600">
-              منصة داخلية في حساب الشركة لاحتضان رواد الأعمال والمشاريع الناشئة، وربطهم ببرامج المسؤولية الاجتماعية أو الاستثمار المباشر.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-              <span>+ إطلاق برنامج حاضنة/مسرّعة جديد</span>
-            </button>
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
-              <span>⋯ إدارة الدفعات الحالية</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-[12px]">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث داخل البرامج</span>
-              <input type="text" class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary" placeholder="ابحث باسم البرنامج أو الفوج...">
-              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
-                <option>كل الحالات</option>
-                <option>جارٍ التنفيذ</option>
-                <option>مكتمل</option>
-                <option>مؤرشف</option>
-              </select>
-            </div>
-            <div class="text-[11px] text-slate-500">
-              ترتبط هذه الخدمة بالحسابات الأخرى عبر استقبال أو إرسال طلبات الانضمام للحاضنات والمسرّعات.
-            </div>
-          </div>
-
-          <div class="overflow-x-auto text-[13px]">
-            <table class="min-w-full border-separate border-spacing-y-1">
-              <thead>
-                <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">اسم البرنامج</th>
-                  <th class="py-2 px-2">نوع البرنامج</th>
-                  <th class="py-2 px-2">الفئة المستهدفة</th>
-                  <th class="py-2 px-2">عدد المشاريع/المشاركين</th>
-                  <th class="py-2 px-2">الحالة</th>
-                  <th class="py-2 px-2">مدة البرنامج</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="mt-3 text-[11px] text-slate-500">
-          <span class="font-semibold">ملاحظة تشغيلية:</span>
-          يمكن للشركة نشر دورات حاضنة/مسرّعة، استقبال طلبات رواد الأعمال، واختيار المشاريع التي يتم رعايتها أو الاستثمار فيها، مع ربط النتائج بتقارير الأثر والمسؤولية الاجتماعية.
-        </div>
-      </section>
-
-      <section data-section="facilities" class="section-hidden">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <div>
-            <h2 class="text-lg font-semibold text-slate-900">إدارة مرافق ومنشآت الشركة</h2>
-            <p class="text-[13px] text-slate-600">
-              صفحة لإدارة قاعات الشركة، مسارحها، مراكزها التدريبية، أو حتى خطوط الإنتاج التي يمكن فتحها للتجارب أو زيارات الجهات التعليمية والمجتمعية.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-              <span>+ إضافة مرفق جديد</span>
-            </button>
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-500 hover:border-slate-400 transition">
-              <span>⋯ إدارة الحجوزات</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-          <div class="flex flex-wrap gap-2 items-center text-[12px]">
-            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية</span>
-            <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
-              <option>نوع المرفق</option>
-              <option>قاعة تدريب</option>
-              <option>قاعة مؤتمرات</option>
-              <option>مسرح</option>
-              <option>مختبر</option>
-              <option>مرفق خارجي</option>
-            </select>
-            <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
-              <option>المدينة / الموقع</option>
-            </select>
-          </div>
-          <div class="text-[11px] text-slate-500">
-            يمكن لأي حساب آخر في المنصة طلب حجز هذه المرافق وفق صلاحيات يحددها صاحب الحساب.
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col text-[13px]">
-            <div class="w-full h-28 rounded-xl bg-slate-100 flex items-center justify-center text-[11px] text-slate-400 mb-2">
-              صورة المرفق (عرض تجريبي)
-            </div>
-            <div class="font-semibold text-slate-900 mb-1">اسم المرفق</div>
-            <div class="text-[12px] text-slate-600 mb-1">نوع المرفق · المدينة</div>
-            <div class="text-[11px] text-slate-500 mb-2">وصف مختصر للمرفق وشروط الاستخدام الأساسية.</div>
-            <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2">
-              <span>الطاقة الاستيعابية: —</span>
-              <span>الحالة: متاح / مشغول</span>
-            </div>
-            <button class="mt-auto inline-flex items-center justify-center px-3 py-1.5 rounded-lg bg-slate-900 text-white text-[12px] hover:bg-black">
-              طلب حجز المرفق (تصميم فقط)
-            </button>
-          </div>
-
-          <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col text-[13px]">
-            <div class="w-full h-28 rounded-xl bg-slate-100 flex items-center justify-center text-[11px] text-slate-400 mb-2">
-              صورة المرفق (عرض تجريبي)
-            </div>
-            <div class="font-semibold text-slate-900 mb-1">اسم المرفق</div>
-            <div class="text-[12px] text-slate-600 mb-1">نوع المرفق · المدينة</div>
-            <div class="text-[11px] text-slate-500 mb-2">وصف مختصر للمرفق وشروط الاستخدام الأساسية.</div>
-            <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2">
-              <span>الطاقة الاستيعابية: —</span>
-              <span>الحالة: متاح / مشغول</span>
-            </div>
-            <button class="mt-auto inline-flex items-center justify-center px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-700 hover:bg-slate-50">
-              عرض تفاصيل المرفق
-            </button>
-          </div>
-        </div>
-
-        <div class="mt-3 text-[11px] text-slate-500">
-          <span class="font-semibold">ملاحظة تشغيلية:</span>
-          يمكن فتح بعض المرافق لبرامج الجامعات، الجمعيات، أو المبادرات الشبابية، مع ربط الحجوزات بتقويم واضح وتقارير استخدام للمرفق ضمن ملف المسؤولية الاجتماعية.
-        </div>
-      </section>
-
-  </main>
+</main>
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
   <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
