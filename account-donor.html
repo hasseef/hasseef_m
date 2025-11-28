@@ -31,7 +31,6 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-<!-- الشريط العلوي -->
 <div class="w-full bg-primary text-white text-[11px]">
   <div class="max-w-6xl mx-auto px-4 py-1 flex items-center justify-between gap-3">
     <div class="flex items-center gap-2">
@@ -39,16 +38,14 @@
       <span>برنامج شباب المملكة حصيف الوطني</span>
     </div>
     <div class="hidden sm:flex items-center gap-4 text-[11px]">
-      <span>منصة وطنية لتمكين الحلول التنموية وربطها بالجهات ذات العلاقة</span>
-      <span class="text-emerald-200">نسخة عرض تشغيلية (Demo Front-End)</span>
+      <span>منصة وطنية لتمكين الحلول والمشاريع والتنمية المتكاملة</span>
+      <span class="text-emerald-200">نسخة تشغيل أمامية تجريبية (Front-End Demo)</span>
     </div>
   </div>
 </div>
 
-<!-- الهيدر الرئيسي -->
 <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-    <!-- شعارات -->
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-2">
         <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
@@ -56,23 +53,20 @@
         </div>
         <div class="leading-tight">
           <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
-          <div class="text-[11px] text-slate-500">بوابة تكاملية للحسابات التنموية</div>
+          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تكامل مع الرؤية 2030</div>
         </div>
       </div>
     </div>
-
-    <!-- روابط علوية بسيطة -->
     <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
       <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
-      <a href="#!" class="hover:text-primary">دليل الاستخدام</a>
-      <a href="#!" class="hover:text-primary">مركز الدعم</a>
+      <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
+      <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
     </nav>
   </div>
 </header>
 
 <main class="flex-1">
   <div class="max-w-6xl mx-auto px-4 py-7 flex flex-col lg:flex-row gap-6">
-    <!-- الشريط الجانبي -->
     <aside class="w-full lg:w-64 shrink-0">
       <div class="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col gap-4">
         <div>
@@ -80,52 +74,57 @@
           <div class="font-semibold text-slate-900">حساب المانح</div>
         </div>
         <div class="border-t border-slate-100 pt-3 flex flex-col gap-1.5">
-          <button type="button"
-              class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition sidebar-link-active"
-              data-sidebar-link="dashboard" data-section-target="dashboard">
-              <span>لوحة التحكم</span>
-              <span class="text-[10px] text-slate-400">↳</span>
-            </button>
-<button type="button"
-              class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-              data-sidebar-link="portfolio" data-section-target="portfolio">
-              <span>محفظة المشاريع</span>
-              <span class="text-[10px] text-slate-400">↳</span>
-            </button>
-<button type="button"
-              class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-              data-sidebar-link="funding-opps" data-section-target="funding-opps">
-              <span>فرص المنح المفتوحة</span>
-              <span class="text-[10px] text-slate-400">↳</span>
-            </button>
-<button type="button"
-              class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-              data-sidebar-link="investments" data-section-target="investments">
-              <span>الاستثمارات التنموية</span>
-              <span class="text-[10px] text-slate-400">↳</span>
-            </button>
-<button type="button"
-              class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-              data-sidebar-link="reports" data-section-target="reports">
-              <span>تقارير الأثر والالتزام</span>
-              <span class="text-[10px] text-slate-400">↳</span>
-            </button>
+          
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition sidebar-link-active"
+          data-sidebar-link="overview" data-section-target="overview">
+          <span>نظرة عامة على محفظة المانح</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+        
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="funding-opps" data-section-target="funding-opps">
+          <span>فرص التمويل المفتوحة</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+        
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="portfolio" data-section-target="portfolio">
+          <span>محفظة المشاريع الممولة</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+        
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="payments" data-section-target="payments">
+          <span>الدفعات والتحويلات</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+        
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="reports" data-section-target="reports">
+          <span>تقارير الأثر والالتزام</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+        
         </div>
         <div class="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
-          هذه النسخة للعرض فقط ولا تعتمد على بيانات حقيقية – الغرض منها اختبار هيكل الصفحات والتنقل بين الخدمات.
+          الواجهة توضح فقط البنية التشغيلية المستخلصة من الملف التشغيلي والتقني الشامل، بدون ربط فعلي بقاعدة بيانات.
         </div>
       </div>
     </aside>
 
-    <!-- منطقة المحتوى -->
     <section class="flex-1">
       
-      <section data-section="dashboard" class="">
+      <section data-section="overview" class="">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="text-lg font-semibold text-slate-900">لوحة التحكم</h2>
+            <h2 class="text-lg font-semibold text-slate-900">نظرة عامة على محفظة المانح</h2>
             <p class="text-[13px] text-slate-600">
-              مساحة لعرض بيانات هذه الخدمة حسب متطلبات منصة حصيف.
+              لوحة تعرض إجمالي التمويل وعدد المشاريع والقطاعات المستفيدة.
             </p>
           </div>
           <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
@@ -137,77 +136,25 @@
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">العنصر</th>
-                  <th class="py-2 px-2">الوصف المختصر</th>
-                  <th class="py-2 px-2">الحالة</th>
-                  <th class="py-2 px-2">الجهة / المالك</th>
-                  <th class="py-2 px-2">آخر تحديث</th>
+                  <th class="py-2 px-2">العنصر</th><th class="py-2 px-2">الوصف المختصر</th><th class="py-2 px-2">الحالة</th><th class="py-2 px-2">المالك/الجهة</th><th class="py-2 px-2">آخر تحديث</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800">عنصر تجريبي</td>
-                  <td class="py-2 px-2 text-slate-600">هذا مجرد صف تجريبي لعرض شكل الجدول في هذه الواجهة.</td>
-                  <td class="py-2 px-2">
-                    <span class="chip border border-emerald-200 bg-emerald-50 text-emerald-700">مسودة</span>
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">غير محدد</td>
-                  <td class="py-2 px-2 text-slate-500">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
-            
-
-      <section data-section="portfolio" class="section-hidden">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <div>
-            <h2 class="text-lg font-semibold text-slate-900">محفظة المشاريع</h2>
-            <p class="text-[13px] text-slate-600">
-              مساحة لعرض بيانات هذه الخدمة حسب متطلبات منصة حصيف.
-            </p>
-          </div>
-          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-            <span>+ إضافة سجل جديد</span>
-          </button>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
-          <div class="overflow-x-auto text-[13px]">
-            <table class="min-w-full border-separate border-spacing-y-1">
-              <thead>
-                <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">العنصر</th>
-                  <th class="py-2 px-2">الوصف المختصر</th>
-                  <th class="py-2 px-2">الحالة</th>
-                  <th class="py-2 px-2">الجهة / المالك</th>
-                  <th class="py-2 px-2">آخر تحديث</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800">عنصر تجريبي</td>
-                  <td class="py-2 px-2 text-slate-600">هذا مجرد صف تجريبي لعرض شكل الجدول في هذه الواجهة.</td>
-                  <td class="py-2 px-2">
-                    <span class="chip border border-emerald-200 bg-emerald-50 text-emerald-700">مسودة</span>
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">غير محدد</td>
-                  <td class="py-2 px-2 text-slate-500">—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-            
-
+        
       <section data-section="funding-opps" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="text-lg font-semibold text-slate-900">فرص المنح المفتوحة</h2>
+            <h2 class="text-lg font-semibold text-slate-900">فرص التمويل المفتوحة</h2>
             <p class="text-[13px] text-slate-600">
-              مساحة لعرض بيانات هذه الخدمة حسب متطلبات منصة حصيف.
+              قائمة بالمشاريع والمبادرات التي يمكن تمويلها.
             </p>
           </div>
           <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
@@ -219,36 +166,25 @@
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">العنصر</th>
-                  <th class="py-2 px-2">الوصف المختصر</th>
-                  <th class="py-2 px-2">الحالة</th>
-                  <th class="py-2 px-2">الجهة / المالك</th>
-                  <th class="py-2 px-2">آخر تحديث</th>
+                  <th class="py-2 px-2">العنصر الممول</th><th class="py-2 px-2">الجهة المستفيدة</th><th class="py-2 px-2">نوع التمويل/الرعاية</th><th class="py-2 px-2">المبلغ</th><th class="py-2 px-2">حالة الاتفاقية</th><th class="py-2 px-2">برنامج الرؤية</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800">عنصر تجريبي</td>
-                  <td class="py-2 px-2 text-slate-600">هذا مجرد صف تجريبي لعرض شكل الجدول في هذه الواجهة.</td>
-                  <td class="py-2 px-2">
-                    <span class="chip border border-emerald-200 bg-emerald-50 text-emerald-700">مسودة</span>
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">غير محدد</td>
-                  <td class="py-2 px-2 text-slate-500">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
-            
-
-      <section data-section="investments" class="section-hidden">
+        
+      <section data-section="portfolio" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="text-lg font-semibold text-slate-900">الاستثمارات التنموية</h2>
+            <h2 class="text-lg font-semibold text-slate-900">محفظة المشاريع الممولة</h2>
             <p class="text-[13px] text-slate-600">
-              مساحة لعرض بيانات هذه الخدمة حسب متطلبات منصة حصيف.
+              متابعة حالة المشاريع التي يمولها المانح.
             </p>
           </div>
           <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
@@ -260,36 +196,55 @@
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">العنصر</th>
-                  <th class="py-2 px-2">الوصف المختصر</th>
-                  <th class="py-2 px-2">الحالة</th>
-                  <th class="py-2 px-2">الجهة / المالك</th>
-                  <th class="py-2 px-2">آخر تحديث</th>
+                  <th class="py-2 px-2">اسم المشروع</th><th class="py-2 px-2">القطاع</th><th class="py-2 px-2">نوع المساهمة</th><th class="py-2 px-2">إجمالي التمويل</th><th class="py-2 px-2">نسبة الصرف</th><th class="py-2 px-2">حالة التنفيذ</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800">عنصر تجريبي</td>
-                  <td class="py-2 px-2 text-slate-600">هذا مجرد صف تجريبي لعرض شكل الجدول في هذه الواجهة.</td>
-                  <td class="py-2 px-2">
-                    <span class="chip border border-emerald-200 bg-emerald-50 text-emerald-700">مسودة</span>
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">غير محدد</td>
-                  <td class="py-2 px-2 text-slate-500">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
-            
-
+        
+      <section data-section="payments" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">الدفعات والتحويلات</h2>
+            <p class="text-[13px] text-slate-600">
+              إدارة الدفعات المالية وربطها بالمراحل التنفيذية.
+            </p>
+          </div>
+          <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
+            <span>+ إضافة سجل جديد</span>
+          </button>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">العنصر الممول</th><th class="py-2 px-2">الجهة المستفيدة</th><th class="py-2 px-2">نوع التمويل/الرعاية</th><th class="py-2 px-2">المبلغ</th><th class="py-2 px-2">حالة الاتفاقية</th><th class="py-2 px-2">برنامج الرؤية</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+        
       <section data-section="reports" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
             <h2 class="text-lg font-semibold text-slate-900">تقارير الأثر والالتزام</h2>
             <p class="text-[13px] text-slate-600">
-              مساحة لعرض بيانات هذه الخدمة حسب متطلبات منصة حصيف.
+              تقارير مالية وتنموية تثبت أثر المنح.
             </p>
           </div>
           <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
@@ -301,65 +256,55 @@
             <table class="min-w-full border-separate border-spacing-y-1">
               <thead>
                 <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">العنصر</th>
-                  <th class="py-2 px-2">الوصف المختصر</th>
-                  <th class="py-2 px-2">الحالة</th>
-                  <th class="py-2 px-2">الجهة / المالك</th>
-                  <th class="py-2 px-2">آخر تحديث</th>
+                  <th class="py-2 px-2">اسم التقرير</th><th class="py-2 px-2">الفترة المغطاة</th><th class="py-2 px-2">الجهة/الحساب</th><th class="py-2 px-2">المؤشرات الرئيسية</th><th class="py-2 px-2">حالة التوليد</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800">عنصر تجريبي</td>
-                  <td class="py-2 px-2 text-slate-600">هذا مجرد صف تجريبي لعرض شكل الجدول في هذه الواجهة.</td>
-                  <td class="py-2 px-2">
-                    <span class="chip border border-emerald-200 bg-emerald-50 text-emerald-700">مسودة</span>
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">غير محدد</td>
-                  <td class="py-2 px-2 text-slate-500">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td><td class="py-2 px-2 text-slate-600">—</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
-            
+        
     </section>
   </div>
 </main>
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
   <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
-    <div>هذه نسخة واجهة تجريبية Front-End فقط لمنصة حصيف – بدون ربط حقيقي بقواعد بيانات.</div>
+    <div>هذه النسخة توضح شكل الحسابات وربطها بالمكوّنات الأساسية Core Modules وفق الملف التشغيلي والتقني.</div>
     <div class="flex items-center gap-2">
-      <span>© برنامج حصيف الوطني</span>
+      <span>© مبادرة تلبية – برنامج حصيف الوطني</span>
       <span class="text-slate-300">|</span>
-      <span>متوافقة مع مستهدفات رؤية 2030</span>
+      <span>متسقة مع مستهدفات رؤية السعودية 2030</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // تبديل الأقسام على مستوى الصفحة
-  document.addEventListener('click', function(e) {{
+  document.addEventListener('click', function(e) {
     const btn = e.target.closest('[data-section-target]');
     if (!btn) return;
     const target = btn.getAttribute('data-section-target');
-    document.querySelectorAll('[data-section]').forEach(sec => {{
-      if (sec.getAttribute('data-section') === target) {{
+    document.querySelectorAll('[data-section]').forEach(sec => {
+      if (sec.getAttribute('data-section') === target) {
         sec.classList.remove('section-hidden');
-      }} else {{
+      } else {
         sec.classList.add('section-hidden');
-      }}
-    }});
-    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
-      if (link.getAttribute('data-sidebar-link') === target) {{
+      }
+    });
+    document.querySelectorAll('[data-sidebar-link]').forEach(link => {
+      if (link.getAttribute('data-sidebar-link') === target) {
         link.classList.add('sidebar-link-active');
-      }} else {{
+      } else {
         link.classList.remove('sidebar-link-active');
-      }}
-    }});
-  }});
+      }
+    });
+  });
 </script>
 </body>
 </html>
+
