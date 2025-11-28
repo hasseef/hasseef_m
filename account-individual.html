@@ -116,15 +116,6 @@
           <span>الفرص الوظيفية والتدريبية</span>
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
-
-        <button type="button"
-          class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
-          data-sidebar-link="admissions" data-section-target="admissions">
-          <span>قبولي التعليمي الموحد</span>
-          <span class="text-[10px] text-slate-400">↳</span>
-        </button>
-
-
         
         <button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
@@ -348,123 +339,6 @@
           فعلياً، مع دعم صلاحيات المستخدمين، وحفظ الطلبات، وتوليد التقارير الآلية.
         </div>
       </section>
-      <section data-section="admissions" class="section-hidden">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <div>
-            <h2 class="text-lg font-semibold text-slate-900">قبولي التعليمي الموحد</h2>
-            <p class="text-[13px] text-slate-600">
-              خدمة توضح كل عروض القبول الواردة لك من الجهات التعليمية في مكان واحد، مع إمكانية اعتماد جهة واحدة نهائياً وإخلاء باقي المقاعد لزملائك.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] text-slate-600 hover:border-primary hover:text-primary transition">
-              <span>تصدير ملخص القبول (PDF)</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-          <div class="flex flex-wrap gap-2 items-center text-[12px]">
-            <span class="chip border border-slate-200 bg-slate-50 text-slate-600">بحث داخل عروض القبول</span>
-            <input type="text" placeholder="ابحث باسم الجهة أو التخصص..."
-                   class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary min-w-[200px]" />
-            <select class="text-[12px] px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
-              <option>كل الحالات</option>
-              <option>عرض نهائي</option>
-              <option>عرض مبدئي</option>
-              <option>منتهي الصلاحية</option>
-              <option>مقبول نهائياً</option>
-              <option>مرفوض من الطالب</option>
-            </select>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px] text-slate-500">
-            <span>الخدمة: قبولي التعليمي الموحد</span>
-            <span class="text-slate-300">|</span>
-            <span>ترتبط بالمكوّنات: الأفراد × الجامعات × وزارة التعليم</span>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4">
-          <div class="overflow-x-auto text-[13px]">
-            <table class="min-w-full border-separate border-spacing-y-1">
-              <thead>
-                <tr class="text-right text-slate-500">
-                  <th class="py-2 px-2">الجهة التعليمية</th>
-                  <th class="py-2 px-2">البرنامج / التخصص</th>
-                  <th class="py-2 px-2">نوع القبول</th>
-                  <th class="py-2 px-2">نوع المقعد</th>
-                  <th class="py-2 px-2">المدينة / المقر</th>
-                  <th class="py-2 px-2">حالة العرض</th>
-                  <th class="py-2 px-2">آخر موعد لاعتماد العرض</th>
-                  <th class="py-2 px-2">الإجراءات</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800 font-semibold">الجامعة السعودية الإلكترونية</td>
-                  <td class="py-2 px-2 text-slate-600">بكالوريوس تقنية معلومات</td>
-                  <td class="py-2 px-2 text-slate-600">عرض نهائي</td>
-                  <td class="py-2 px-2 text-slate-600">منحة جزئية</td>
-                  <td class="py-2 px-2 text-slate-600">الرياض – فرع رئيسي</td>
-                  <td class="py-2 px-2 text-emerald-700 text-[12px]">
-                    مقبول نهائياً (مثال توضيحي)
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">—</td>
-                  <td class="py-2 px-2 text-[12px] text-slate-500">
-                    تمت عملية الاعتماد سابقاً (عرض تصميمي).
-                  </td>
-                </tr>
-                <tr class="bg-white">
-                  <td class="py-2 px-2 text-slate-800 font-semibold">جامعة حائل</td>
-                  <td class="py-2 px-2 text-slate-600">بكالوريوس قانون</td>
-                  <td class="py-2 px-2 text-slate-600">عرض نهائي</td>
-                  <td class="py-2 px-2 text-slate-600">مقعد مدعوم حكومياً</td>
-                  <td class="py-2 px-2 text-slate-600">حائل – المقر الرئيسي</td>
-                  <td class="py-2 px-2 text-amber-700 text-[12px]">
-                    عرض بانتظار قرارك
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">10 / 08 / 2025</td>
-                  <td class="py-2 px-2 text-[12px]">
-                    <div class="flex flex-wrap gap-1">
-                      <button type="button"
-                              class="px-2 py-1 rounded-lg bg-primary text-white hover:bg-emerald-700"
-                              data-open-admission-confirm>
-                        اعتماد القبول نهائياً
-                      </button>
-                      <button type="button"
-                              class="px-2 py-1 rounded-lg border border-slate-200 text-slate-600 hover:border-rose-300 hover:text-rose-600"
-                              data-open-admission-decline>
-                        اعتذار عن العرض
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="bg-slate-50">
-                  <td class="py-2 px-2 text-slate-800 font-semibold">كلية تقنية حائل</td>
-                  <td class="py-2 px-2 text-slate-600">دبلوم شبكات</td>
-                  <td class="py-2 px-2 text-slate-600">عرض مبدئي</td>
-                  <td class="py-2 px-2 text-slate-600">مقعد تدريبي</td>
-                  <td class="py-2 px-2 text-slate-600">حائل</td>
-                  <td class="py-2 px-2 text-slate-500 text-[12px]">
-                    منتهي الصلاحية – لم يتم اعتماد العرض في الوقت المحدد
-                  </td>
-                  <td class="py-2 px-2 text-slate-600">01 / 08 / 2025</td>
-                  <td class="py-2 px-2 text-[12px] text-slate-400">
-                    — 
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="mt-3 text-[11px] text-slate-500">
-          <span class="font-semibold">ملاحظة تشغيلية:</span>
-          عند ربط هذه الخدمة فعلياً بأنظمة القبول في الجامعات ووزارة التعليم، سيتم تحديث الحالات تلقائياً،
-          وإرسال إشعارات للجهات عند اعتمادك أو اعتذارك عن العروض، مع إخلاء المقاعد لمرشحين آخرين.
-        </div>
-      </section>
-
         
       <section data-section="volunteering" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
@@ -660,46 +534,6 @@
         
     </section>
   </div>
-
-    <!-- نوافذ منبثقة لخدمة قبولي التعليمي -->
-    <div id="admission-confirm-modal" class="fixed inset-0 bg-black/40 flex items-center justify-center px-4 z-50 hidden">
-      <div class="bg-white max-w-md w-full rounded-2xl border border-slate-200 shadow-xl p-5 text-sm">
-        <div class="flex items-center justify-between mb-3">
-          <h3 class="text-base font-semibold text-slate-900">اعتماد القبول نهائياً</h3>
-          <button type="button" class="text-slate-500 hover:text-slate-700" data-close-admission-modal>✕</button>
-        </div>
-        <p class="text-[13px] text-slate-600 mb-3">
-          باعتمادك لهذا القبول كخيارك التعليمي الرئيسي، سيتم اعتذار النظام تلقائياً عن العروض الأخرى في الجهات التي قبلتك،
-          ليتاح المقعد لزملائك. هذا نموذج عرض فقط دون تنفيذ فعلي.
-        </p>
-        <div class="mt-3 flex items-center justify-between">
-          <span class="text-[11px] text-slate-500">لن يتم حفظ أي بيانات حقيقية في هذه النسخة التجريبية.</span>
-          <button class="px-4 py-1.5 rounded-lg bg-primary text-white text-[12px] hover:bg-emerald-700" data-close-admission-modal>
-            تأكيد الاعتماد (تجريبي)
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="admission-decline-modal" class="fixed inset-0 bg-black/40 flex items-center justify-center px-4 z-50 hidden">
-      <div class="bg-white max-w-md w-full rounded-2xl border border-slate-200 shadow-xl p-5 text-sm">
-        <div class="flex items-center justify-between mb-3">
-          <h3 class="text-base font-semibold text-slate-900">اعتذار عن عرض القبول</h3>
-          <button type="button" class="text-slate-500 hover:text-slate-700" data-close-admission-modal>✕</button>
-        </div>
-        <p class="text-[13px] text-slate-600 mb-2">
-          يمكنك توضيح سبب الاعتذار عن هذا العرض، علماً بأن هذا النموذج لأغراض العرض فقط دون إرسال فعلي.
-        </p>
-        <textarea rows="3" class="w-full rounded-xl border border-slate-200 px-3 py-2 text-[13px] focus:outline-none focus:ring-1 focus:ring-primary" placeholder="مثال: تم اعتماد جهة تعليمية أخرى، ظروف خاصة، مدينة غير مناسبة..."></textarea>
-        <div class="mt-3 flex items-center justify-between">
-          <span class="text-[11px] text-slate-500">لن يتم إرسال هذه الملاحظة لأي جهة في هذه النسخة.</span>
-          <button class="px-4 py-1.5 rounded-lg bg-slate-900 text-white text-[12px] hover:bg-black" data-close-admission-modal>
-            حفظ كنموذج تجريبي
-          </button>
-        </div>
-      </div>
-    </div>
-
 </main>
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
@@ -713,48 +547,27 @@
   </div>
 </footer>
 
-
 <script>
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function(e) {{
     const btn = e.target.closest('[data-section-target]');
-    if (btn) {
-      const target = btn.getAttribute('data-section-target');
-      document.querySelectorAll('[data-section]').forEach(function(sec) {
-        if (sec.getAttribute('data-section') === target) {
-          sec.classList.remove('section-hidden');
-        } else {
-          sec.classList.add('section-hidden');
-        }
-      });
-      document.querySelectorAll('[data-sidebar-link]').forEach(function(link) {
-        if (link.getAttribute('data-sidebar-link') === target) {
-          link.classList.add('sidebar-link-active');
-        } else {
-          link.classList.remove('sidebar-link-active');
-        }
-      });
-    }
-
-    const openConfirm = e.target.closest('[data-open-admission-confirm]');
-    if (openConfirm) {
-      var m = document.getElementById('admission-confirm-modal');
-      if (m) m.classList.remove('hidden');
-    }
-    const openDecline = e.target.closest('[data-open-admission-decline]');
-    if (openDecline) {
-      var m2 = document.getElementById('admission-decline-modal');
-      if (m2) m2.classList.remove('hidden');
-    }
-    const closeAny = e.target.closest('[data-close-admission-modal]');
-    if (closeAny) {
-      var m3 = document.getElementById('admission-confirm-modal');
-      var m4 = document.getElementById('admission-decline-modal');
-      if (m3) m3.classList.add('hidden');
-      if (m4) m4.classList.add('hidden');
-    }
-  });
+    if (!btn) return;
+    const target = btn.getAttribute('data-section-target');
+    document.querySelectorAll('[data-section]').forEach(sec => {{
+      if (sec.getAttribute('data-section') === target) {{
+        sec.classList.remove('section-hidden');
+      }} else {{
+        sec.classList.add('section-hidden');
+      }}
+    }});
+    document.querySelectorAll('[data-sidebar-link]').forEach(link => {{
+      if (link.getAttribute('data-sidebar-link') === target) {{
+        link.classList.add('sidebar-link-active');
+      }} else {{
+        link.classList.remove('sidebar-link-active');
+      }}
+    }});
+  }});
 </script>
 </body>
-
 </html>
 
