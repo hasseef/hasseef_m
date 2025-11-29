@@ -52,21 +52,36 @@
 <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
     <div class="flex items-center gap-4">
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
-          <span class="text-primary font-bold text-lg">ح</span>
-        </div>
-        <div class="leading-tight">
-          <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
-          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
+      
+        <div class="flex items-center gap-3">
+          <img src="hasif-logo.png" alt="منصة حصيف" class="h-10 w-auto hidden sm:block">
+          <div class="leading-tight">
+            <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
+            <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
+          </div>
         </div>
       </div>
     </div>
-    <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
-      <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
-      <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
-      <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
-    </nav>
+    
+    <div class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
+      <nav class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
+        <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
+        <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <img src="Vision2030.png" alt="رؤية السعودية 2030" class="h-8 w-auto hidden lg:block">
+        <img src="talbiya-logo.png" alt="مبادرة تلبية" class="h-8 w-auto hidden lg:block">
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-700 hover:border-primary hover:text-primary transition">
+          تسجيل الدخول
+        </button>
+        <button class="px-3 py-1.5 rounded-full bg-primary text-white text-[12px] hover:bg-emerald-700 transition">
+          إنشاء حساب
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -98,6 +113,13 @@
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
           data-sidebar-link="programs" data-section-target="programs">
           <span>البرامج والمبادرات</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="sponsorship-programs" data-section-target="sponsorship-programs">
+          <span>برامج مطروحة لرعاية القطاع الخاص</span>
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
         
@@ -526,7 +548,74 @@
     </section>
   </div>
 
-      <section data-section="wallet" class="section-hidden">
+      
+      <section data-section="sponsorship-programs" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">برامج ومشاريع مطروحة لرعاية القطاع الخاص</h2>
+            <p class="text-[13px] text-slate-600">
+              تتيح هذه الواجهة للجهة الحكومية طرح برامجها ومبادراتها ومشاريعها التنموية كفرص رعاية ومسؤولية اجتماعية
+              أمام القطاع الخاص والجهات المانحة، مع وضوح نوع الرعاية المطلوبة وحالة كل فرصة.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-[12px]">
+            <div class="flex flex-wrap gap-2 items-center">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية البرامج</span>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل أنواع البرامج</option>
+                <option>برامج مجتمعية</option>
+                <option>برامج اقتصادية</option>
+                <option>برامج بيئية</option>
+              </select>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل حالات الفرصة</option>
+                <option>مطروحة للرعاية</option>
+                <option>قيد التفاوض</option>
+                <option>تم إغلاقها</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              في التطبيق الفعلي، تُعرض هذه الفرص في حسابات القطاع الخاص والجهات المانحة كفرص رعاية واستثمار اجتماعي.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم البرنامج / المشروع</th>
+                  <th class="py-2 px-2">نوع التدخل</th>
+                  <th class="py-2 px-2">القطاعات المستهدفة للمشاركة</th>
+                  <th class="py-2 px-2">نوع الرعاية المطلوبة</th>
+                  <th class="py-2 px-2">القيمة التقديرية</th>
+                  <th class="py-2 px-2">حالة الفرصة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          في النسخة الفعلية، يمكن ربط هذه الواجهة بمحفظة الجهة الحكومية ومحافظ الشركات والجهات المانحة،
+          مع احتساب الأثر التنموي وربط ذلك بتقارير الرؤية 2030.
+        </div>
+      </section>
+
+<section data-section="wallet" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
             <h2 class="text-lg font-semibold text-slate-900">محفظة الجهة الحكومية</h2>

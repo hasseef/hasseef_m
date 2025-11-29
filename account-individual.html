@@ -52,21 +52,36 @@
 <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
     <div class="flex items-center gap-4">
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-xl bg-primary-soft flex items-center justify-center">
-          <span class="text-primary font-bold text-lg">ح</span>
-        </div>
-        <div class="leading-tight">
-          <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
-          <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
+      
+        <div class="flex items-center gap-3">
+          <img src="hasif-logo.png" alt="منصة حصيف" class="h-10 w-auto hidden sm:block">
+          <div class="leading-tight">
+            <div class="font-semibold text-primary text-sm">منصة حصيف الوطنية</div>
+            <div class="text-[11px] text-slate-500">حلول · مشاريع · فعاليات · فرص · رعايات · تمويل · تقارير رؤية 2030</div>
+          </div>
         </div>
       </div>
     </div>
-    <nav class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
-      <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
-      <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
-      <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
-    </nav>
+    
+    <div class="hidden md:flex items-center gap-5 text-[13px] text-slate-600">
+      <nav class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-primary">الصفحة الرئيسية</a>
+        <a href="#modules" class="hover:text-primary">المكوّنات الأساسية</a>
+        <a href="#vision" class="hover:text-primary">الرؤية 2030</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <img src="Vision2030.png" alt="رؤية السعودية 2030" class="h-8 w-auto hidden lg:block">
+        <img src="talbiya-logo.png" alt="مبادرة تلبية" class="h-8 w-auto hidden lg:block">
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="px-3 py-1.5 rounded-full border border-slate-200 text-[12px] text-slate-700 hover:border-primary hover:text-primary transition">
+          تسجيل الدخول
+        </button>
+        <button class="px-3 py-1.5 rounded-full bg-primary text-white text-[12px] hover:bg-emerald-700 transition">
+          إنشاء حساب
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -115,6 +130,28 @@
           <span class="text-[10px] text-slate-400">↳</span>
         </button>
         
+        
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="admission" data-section-target="admission">
+          <span>القبول العلمي والفرص التعليمية</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="facilities" data-section-target="facilities">
+          <span>طلبات استخدام المرافق</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
+        <button type="button"
+          class="w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
+          data-sidebar-link="incubator" data-section-target="incubator">
+          <span>حاضنة أفكاري ومشاريعي</span>
+          <span class="text-[10px] text-slate-400">↳</span>
+        </button>
+
         <button type="button"
           class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] text-slate-600 hover:bg-primary-soft hover:text-primary transition "
           data-sidebar-link="wallet" data-section-target="wallet">
@@ -526,7 +563,213 @@
     </section>
   </div>
 
-      <section data-section="experts" class="section-hidden">
+      
+      <section data-section="admission" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">القبول العلمي والفرص التعليمية المتاحة لي</h2>
+            <p class="text-[13px] text-slate-600">
+              في هذه الواجهة يمكنك متابعة نتائج القبول في الجامعات والكليات والمعاهد والبرامج التدريبية المرتبطة بمنصة حصيف،
+              واعتماد جهة واحدة فقط كجهة الالتحاق النهائية، بحيث تتحرّر بقية المقاعد ليستفيد منها متقدمون آخرون.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-[12px]">
+            <div class="flex flex-wrap gap-2 items-center">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">ترشيحات القبول</span>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الجهات</option>
+                <option>جامعات</option>
+                <option>كليات</option>
+                <option>معاهد</option>
+                <option>برامج تدريبية</option>
+              </select>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحالات</option>
+                <option>مرشح</option>
+                <option>مقبول مبدئياً</option>
+                <option>مقبول نهائياً</option>
+                <option>مرفوض</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              يمكنك اختيار جهة واحدة فقط لاعتماد القبول النهائي. عند اعتمادك للقبول في جهة معينة، تُعاد بقية المقاعد للنظام ليستفيد منها متقدمون آخرون.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم الجهة التعليمية</th>
+                  <th class="py-2 px-2">البرنامج</th>
+                  <th class="py-2 px-2">نوع البرنامج</th>
+                  <th class="py-2 px-2">حالة القبول</th>
+                  <th class="py-2 px-2">تاريخ آخر تحديث</th>
+                  <th class="py-2 px-2">إجراء</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">
+                    <button class="px-3 py-1.5 rounded-lg bg-slate-900 text-white text-[11px] hover:bg-black">
+                      اعتماد القبول (تصميم فقط)
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          في التنفيذ الفعلي، يتم ربط هذه الصفحة بأنظمة القبول في الجامعات والجهات التعليمية، بحيث يتم إغلاق بقية الترشيحات
+          تلقائياً بعد اعتمادك لمقعد واحد نهائي، مع إتاحة مقعدك السابق لمتقدم آخر وفق سياسات الجهة التعليمية.
+        </div>
+      </section>
+
+      <section data-section="facilities" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">طلبات استخدام المرافق</h2>
+            <p class="text-[13px] text-slate-600">
+              هنا يمكنك متابعة طلباتك لاستخدام المرافق التي تملكها جهات حكومية أو جامعات أو جمعيات أو شركات (مثل القاعات
+              والمسارح وقاعات الاجتماعات)، وفق سياسات كل جهة، دون أن تمتلك صلاحية تأجير أو إدارة هذه المرافق بنفسك.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-[12px]">
+            <div class="flex flex-wrap gap-2 items-center">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية حسب نوع الجهة</span>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الجهات المالكة</option>
+                <option>إمارة / هيئة تطوير</option>
+                <option>جهة حكومية</option>
+                <option>قطاع غير ربحي</option>
+                <option>قطاع خاص</option>
+                <option>جامعة</option>
+              </select>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحالات</option>
+                <option>قيد المراجعة</option>
+                <option>معتمد</option>
+                <option>مرفوض</option>
+                <option>منتهي</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              تملك كل جهة حساباً مستقلاً لإدارة مرافقها واعتماد أو رفض طلبات الاستخدام، بينما يظهر لك هنا ملخص طلباتك فقط.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم الجهة المالكة</th>
+                  <th class="py-2 px-2">اسم المرفق</th>
+                  <th class="py-2 px-2">الغرض من الاستخدام</th>
+                  <th class="py-2 px-2">التاريخ / الفترة</th>
+                  <th class="py-2 px-2">الحالة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          في النسخة الفعلية، يمكن ربط هذه الصفحة بأنظمة حجز المرافق في حسابات الإمارة والجهات الحكومية والجامعات والجمعيات
+          والشركات، مع الالتزام بسياسات كل جهة.
+        </div>
+      </section>
+
+      <section data-section="incubator" class="section-hidden">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">حاضنة أفكاري ومشاريعي</h2>
+            <p class="text-[13px] text-slate-600">
+              هنا يمكنك متابعة طلباتك للانضمام إلى الحاضنات والمسرّعات المختلفة (جامعات، جمعيات، شركات، جهات حكومية)
+              عبر منصة حصيف، ومعرفة حالة كل فكرة أو مشروع تقدمت به.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3 sm:p-4 mb-3">
+          <div class="mb-3 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-[12px]">
+            <div class="flex flex-wrap gap-2 items-center">
+              <span class="chip border border-slate-200 bg-slate-50 text-slate-600">تصفية الطلبات</span>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحاضنات</option>
+                <option>حاضنات جامعية</option>
+                <option>حاضنات غير ربحية</option>
+                <option>حاضنات شركات</option>
+                <option>برامج حكومية</option>
+              </select>
+              <select class="px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-primary">
+                <option>كل الحالات</option>
+                <option>قيد المراجعة</option>
+                <option>مقبول</option>
+                <option>مرفوض</option>
+                <option>على قائمة الانتظار</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-slate-500">
+              ترتبط هذه الطلبات مباشرة بحسابات الجهات المالكة للحاضنات، بينما يبقى هذا الحساب لعرض حالة طلباتك فقط.
+            </div>
+          </div>
+
+          <div class="overflow-x-auto text-[13px]">
+            <table class="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr class="text-right text-slate-500">
+                  <th class="py-2 px-2">اسم الفكرة / المشروع</th>
+                  <th class="py-2 px-2">الجهة / الحاضنة</th>
+                  <th class="py-2 px-2">نوع البرنامج</th>
+                  <th class="py-2 px-2">الحالة</th>
+                  <th class="py-2 px-2">آخر تحديث</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-50">
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                  <td class="py-2 px-2 text-slate-600">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 text-[11px] text-slate-500">
+          <span class="font-semibold">ملاحظة تشغيلية:</span>
+          في النسخة الفعلية، يمكن ربط هذه الصفحة مباشرة بنماذج التقديم في الحاضنات المختلفة داخل منصة حصيف،
+          بحيث يتم تحديث حالة كل مشروع أو فكرة بشكل آلي من حساب الجهة المالكة للحاضنة.
+        </div>
+      </section>
+
+<section data-section="experts" class="section-hidden">
         <div class="flex items-center justify-between gap-3 mb-4">
           <div>
             <h2 class="text-lg font-semibold text-slate-900">ملفي كمدرب / متحدث / خبير</h2>
